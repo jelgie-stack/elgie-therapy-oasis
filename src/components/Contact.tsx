@@ -62,8 +62,8 @@ const Contact = () => {
                   Session Hours
                 </h3>
                 <div className="space-y-2 text-muted-foreground">
-                  <p>Monday - Thursday: 9:00 AM - 6:00 PM</p>
-                  <p>Friday: 9:00 AM - 3:00 PM</p>
+                  <p>Tuesdays & Thursdays: 9:00 AM - 6:00 PM</p>
+                  <p>Saturdays: 10:00 AM - 2:00 PM</p>
                   <p className="text-sm">Evening appointments available upon request</p>
                 </div>
               </CardContent>
