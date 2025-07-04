@@ -1,0 +1,113 @@
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+
+const Contact = () => {
+  const handleBooking = () => {
+    window.open("https://headway.co/booking/brigette-elgie", "_blank");
+  };
+
+  const handleConsultation = () => {
+    window.open("https://headway.co/booking/brigette-elgie", "_blank");
+  };
+
+  return (
+    <section id="contact" className="py-20 bg-gradient-to-b from-secondary/30 to-primary-light/20">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-foreground mb-4">
+            Ready to Begin Your Journey?
+          </h2>
+          <div className="w-20 h-1 bg-accent rounded-full mx-auto mb-6"></div>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Taking the first step toward healing takes courage. I'm here to support you every step of the way.
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Contact Info */}
+          <div className="space-y-8">
+            <Card className="p-6">
+              <CardContent className="p-0">
+                <h3 className="text-xl font-semibold text-primary mb-4">
+                  Office Location
+                </h3>
+                <div className="space-y-2 text-muted-foreground">
+                  <p>Park City, Utah</p>
+                  <p className="text-sm">*Exact address provided upon booking*</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="p-6">
+              <CardContent className="p-0">
+                <h3 className="text-xl font-semibold text-primary mb-4">
+                  Telehealth Services
+                </h3>
+                <div className="space-y-2 text-muted-foreground">
+                  <p>Licensed in:</p>
+                  <ul className="space-y-1 ml-4">
+                    <li>• Utah</li>
+                    <li>• California</li>
+                    <li>• Washington</li>
+                    <li>• New Hampshire</li>
+                  </ul>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="p-6">
+              <CardContent className="p-0">
+                <h3 className="text-xl font-semibold text-primary mb-4">
+                  Session Hours
+                </h3>
+                <div className="space-y-2 text-muted-foreground">
+                  <p>Monday - Thursday: 9:00 AM - 6:00 PM</p>
+                  <p>Friday: 9:00 AM - 3:00 PM</p>
+                  <p className="text-sm">Evening appointments available upon request</p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* CTA Section */}
+          <div className="text-center lg:text-left space-y-6">
+            <div className="bg-card p-8 rounded-xl shadow-card">
+              <h3 className="text-2xl font-semibold text-primary mb-4">
+                Start Your Healing Journey Today
+              </h3>
+              <p className="text-muted-foreground mb-8 leading-relaxed">
+                Whether you're dealing with trauma, relationship challenges, or seeking personal growth, 
+                I'm here to help. Book your appointment or start with a free consultation to see if we're a good fit.
+              </p>
+              
+              <div className="space-y-4">
+                <Button 
+                  variant="cta" 
+                  size="lg" 
+                  onClick={handleBooking}
+                  className="w-full text-lg py-6"
+                >
+                  Book an Appointment
+                </Button>
+                <Button 
+                  variant="soft" 
+                  size="lg" 
+                  onClick={handleConsultation}
+                  className="w-full text-lg py-6"
+                >
+                  Free 15-min Consultation
+                </Button>
+              </div>
+
+              <p className="text-sm text-muted-foreground mt-4">
+                All appointments are scheduled through Headway for your convenience and insurance coordination.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
