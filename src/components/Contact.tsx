@@ -32,8 +32,9 @@ const Contact = () => {
                   Office Location
                 </h3>
                 <div className="space-y-2 text-muted-foreground">
-                  <p>Park City, Utah</p>
-                  <p className="text-sm">*Exact address provided upon booking*</p>
+                  <p>3080 West Pinebrook Road</p>
+                  <p>Suite 1100</p>
+                  <p>Park City, UT 84098</p>
                 </div>
               </CardContent>
             </Card>

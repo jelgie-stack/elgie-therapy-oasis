@@ -1,4 +1,4 @@
-import portraitPlaceholder from "@/assets/portrait-placeholder.jpg";
+const portraitUrl = "/lovable-uploads/8b9bb41a-7d3d-4a40-b9a9-a71278293db1.png";
 
 const About = () => {
   return (
@@ -9,7 +9,7 @@ const About = () => {
           <div className="relative">
             <div className="aspect-square rounded-2xl overflow-hidden shadow-card">
               <img
-                src={portraitPlaceholder}
+                src={portraitUrl}
                 alt="Brigette Elgie, LMFT"
                 className="w-full h-full object-cover"
               />
