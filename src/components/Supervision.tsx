@@ -71,7 +71,7 @@ const Supervision = () => {
 
         {/* Urgency Banner */}
         <div className="max-w-2xl mx-auto mb-16">
-          <Card className="bg-accent-light border-accent border-2">
+          <Card className="bg-accent border-none shadow-card">
             <CardContent className="p-6 text-center">
               <div className="text-2xl mb-2">⏳</div>
               <h3 className="text-xl font-semibold text-accent-foreground mb-2">
