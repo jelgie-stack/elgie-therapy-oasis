@@ -5,6 +5,7 @@ import About from "@/components/About";
 import Specialties from "@/components/Specialties";
 import FeesInsurance from "@/components/FeesInsurance";
 import Reviews from "@/components/Reviews";
+import Supervision from "@/components/Supervision";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import VideoModal from "@/components/VideoModal";
@@ -20,6 +21,7 @@ const Index = () => {
       <Specialties />
       <FeesInsurance />
       <Reviews />
+      <Supervision />
       <Contact />
       <Footer />
       <VideoModal 

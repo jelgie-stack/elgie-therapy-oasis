@@ -67,6 +67,12 @@ const Navbar = () => {
               Reviews
             </button>
             <button
+              onClick={() => scrollToSection("supervision")}
+              className="text-foreground hover:text-primary transition-colors"
+            >
+              Supervision
+            </button>
+            <button
               onClick={() => scrollToSection("contact")}
               className="text-foreground hover:text-primary transition-colors"
             >
