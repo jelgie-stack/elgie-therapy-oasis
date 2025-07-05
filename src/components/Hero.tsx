@@ -16,7 +16,7 @@ const Hero = ({ onVideoClick }: HeroProps) => {
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
-          alt="Peaceful therapy office"
+          alt="Child trauma therapy session in Park City clinic with healing environment"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60" />
@@ -27,11 +27,15 @@ const Hero = ({ onVideoClick }: HeroProps) => {
         <div className="max-w-2xl">
           <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
             Trauma-Informed Therapy for{" "}
-            <span className="text-primary">Kids</span>, <span className="text-primary">Teens</span> & <span className="text-primary">Adults</span>
+            <span className="text-primary">Kids</span>, <span className="text-primary">Teens</span> & <span className="text-primary">Adults</span> in Park City, Utah & Online
           </h1>
           
+          <p className="text-lg md:text-xl text-muted-foreground mb-4">
+            Expert care for anxiety, depression & ADHD.
+          </p>
+          
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-            Helping ages 4-18—and the adults who love them—overcome anxiety, depression, ADHD & trauma in Park City & Telehealth
+            Helping ages 4-18—and the adults who love them—overcome trauma in Park City & Telehealth
             across <strong>UT, CA, WA & NH</strong>
           </p>
 

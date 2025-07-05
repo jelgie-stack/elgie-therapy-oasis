@@ -10,7 +10,7 @@ const About = () => {
             <div className="aspect-square rounded-2xl overflow-hidden shadow-card">
               <img
                 src={portraitUrl}
-                alt="Brigette Elgie, LMFT"
+                alt="Brigette Elgie, LMFT - Licensed therapist specializing in child and teen therapy in Park City, Utah"
                 className="w-full h-full object-cover"
               />
             </div>

@@ -3,32 +3,38 @@ const Specialties = () => {
     {
       title: "Child Therapy (4-12)",
       description: "Play-based therapy and behavioral interventions to help young children process emotions and develop coping skills.",
-      techniques: ["Play Therapy", "Behavioral Interventions", "Parent-Child Interaction"]
+      techniques: ["Play Therapy", "Behavioral Interventions", "Parent-Child Interaction"],
+      anchor: "child-therapist-park-city"
     },
     {
       title: "Teen Therapy (13-18)",
       description: "Supporting adolescents through anxiety, identity development, school stress, and life transitions.",
-      techniques: ["Cognitive Behavioral Therapy", "Mindfulness Skills", "Identity Exploration"]
+      techniques: ["Cognitive Behavioral Therapy", "Mindfulness Skills", "Identity Exploration"],
+      anchor: "teen-therapist-park-city"
     },
     {
-      title: "Adult Individuals",
-      description: "Individual therapy for trauma, grief, life transitions, and personal growth in a safe, supportive environment.",
-      techniques: ["ART (Accelerated Resolution Therapy)", "EMDR", "Trauma-Focused CBT"]
+      title: "Adult Trauma Therapy (EMDR & ART)",
+      description: "Individual therapy for trauma, grief, life transitions, and personal growth using advanced therapeutic modalities.",
+      techniques: ["ART (Accelerated Resolution Therapy)", "EMDR", "Trauma-Focused CBT"],
+      anchor: "emdr-therapist-park-city"
+    },
+    {
+      title: "Anxiety & Depression",
+      description: "CBT and skills-based interventions for managing anxiety and depression across all ages.",
+      techniques: ["Cognitive Behavioral Therapy", "Mindfulness-Based Approaches", "Exposure Therapy"],
+      anchor: "anxiety-depression-therapy-park-city"
+    },
+    {
+      title: "ADHD Behaviour Coaching",
+      description: "Executive function skills and behavioral strategies for children, teens, and adults with ADHD.",
+      techniques: ["Executive Function Skills", "Behavioral Management", "Attention Training"],
+      anchor: "adhd-therapy-park-city"
     },
     {
       title: "Parent Coaching",
       description: "Evidence-based strategies and support for parents navigating behavioral challenges and family dynamics.",
-      techniques: ["Behavioral Management", "Communication Skills", "Family Systems"]
-    },
-    {
-      title: "Trauma Treatment",
-      description: "Specialized treatment for PTSD, complex trauma, and childhood trauma using advanced therapeutic modalities.",
-      techniques: ["ART Master Practitioner", "EMDR", "Trauma-Informed Care"]
-    },
-    {
-      title: "Anxiety, Depression & ADHD",
-      description: "CBT and skills-based interventions for managing anxiety, depression, and ADHD across all ages.",
-      techniques: ["Cognitive Behavioral Therapy", "Mindfulness-Based Approaches", "Executive Function Skills"]
+      techniques: ["Behavioral Management", "Communication Skills", "Family Systems"],
+      anchor: "parent-coaching-park-city"
     }
   ];
 
@@ -49,6 +55,7 @@ const Specialties = () => {
           {specialties.map((specialty, index) => (
             <div
               key={index}
+              id={specialty.anchor}
               className="bg-card p-8 rounded-xl shadow-card border border-primary/10 hover:shadow-floating transition-all duration-300"
             >
               <h3 className="text-2xl font-semibold text-primary mb-4">

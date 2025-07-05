@@ -52,9 +52,28 @@ const Reviews = () => {
           </h2>
           <div className="w-20 h-1 bg-accent rounded-full mx-auto mb-6"></div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Hear from clients who have found healing and growth through our therapeutic work together.
+            Hear from families who have found healing and growth through our therapy services.
           </p>
         </div>
+
+        {/* Aggregate Rating Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "Brigette Elgie, LMFT",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "27",
+                "bestRating": "5",
+                "worstRating": "1"
+              }
+            })
+          }}
+        />
 
         <div className="grid md:grid-cols-2 gap-8">
           {reviews.map((review, index) => (

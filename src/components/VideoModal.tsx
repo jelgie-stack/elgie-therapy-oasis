@@ -20,7 +20,7 @@ const VideoModal = ({ isOpen, onClose }: VideoModalProps) => {
               </svg>
             </div>
             <p className="text-lg font-medium">Video Coming Soon</p>
-            <p className="text-sm">Placeholder for Vimeo/YouTube embed</p>
+            <p className="text-sm">Placeholder for Vimeo/YouTube embed with lazy loading</p>
           </div>
         </div>
       </DialogContent>
