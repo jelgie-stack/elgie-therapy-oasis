@@ -1,24 +1,34 @@
 const Specialties = () => {
   const specialties = [
     {
-      title: "Trauma Therapy",
-      description: "Evidence-based treatment for PTSD, complex trauma, and childhood trauma using ART and EMDR.",
+      title: "Child Therapy (4-12)",
+      description: "Play-based therapy and behavioral interventions to help young children process emotions and develop coping skills.",
+      techniques: ["Play Therapy", "Behavioral Interventions", "Parent-Child Interaction"]
+    },
+    {
+      title: "Teen Therapy (13-18)",
+      description: "Supporting adolescents through anxiety, identity development, school stress, and life transitions.",
+      techniques: ["Cognitive Behavioral Therapy", "Mindfulness Skills", "Identity Exploration"]
+    },
+    {
+      title: "Adult Individuals",
+      description: "Individual therapy for trauma, grief, life transitions, and personal growth in a safe, supportive environment.",
       techniques: ["ART (Accelerated Resolution Therapy)", "EMDR", "Trauma-Focused CBT"]
     },
     {
-      title: "Family Therapy",
-      description: "Healing family relationships and improving communication patterns for all family members.",
-      techniques: ["Structural Family Therapy", "Play-Based Approaches", "Family Systems"]
+      title: "Parent Coaching",
+      description: "Evidence-based strategies and support for parents navigating behavioral challenges and family dynamics.",
+      techniques: ["Behavioral Management", "Communication Skills", "Family Systems"]
     },
     {
-      title: "Couples Therapy",
-      description: "Strengthening relationships, improving communication, and rebuilding trust and intimacy.",
-      techniques: ["Gottman Method", "Emotionally Focused Therapy", "Communication Skills"]
+      title: "Trauma Treatment",
+      description: "Specialized treatment for PTSD, complex trauma, and childhood trauma using advanced therapeutic modalities.",
+      techniques: ["ART Master Practitioner", "EMDR", "Trauma-Informed Care"]
     },
     {
-      title: "Individual Therapy",
-      description: "Personal growth, anxiety, depression, life transitions, and self-discovery in a safe space.",
-      techniques: ["Cognitive Behavioral Therapy", "Mindfulness-Based Approaches", "Solution-Focused Therapy"]
+      title: "Anxiety, Depression & ADHD",
+      description: "CBT and skills-based interventions for managing anxiety, depression, and ADHD across all ages.",
+      techniques: ["Cognitive Behavioral Therapy", "Mindfulness-Based Approaches", "Executive Function Skills"]
     }
   ];
 

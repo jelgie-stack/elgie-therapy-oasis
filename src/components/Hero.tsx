@@ -26,13 +26,12 @@ const Hero = ({ onVideoClick }: HeroProps) => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-2xl">
           <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-            Therapy for Healing,{" "}
-            <span className="text-primary">Growth</span>, and{" "}
-            <span className="text-primary">Resilience</span>
+            Trauma-Informed Therapy for{" "}
+            <span className="text-primary">Kids</span>, <span className="text-primary">Teens</span> & <span className="text-primary">Adults</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-            Evidence-based trauma and family therapy in Park City & Telehealth
+            Helping ages 4-18—and the adults who love them—overcome anxiety, depression, ADHD & trauma in Park City & Telehealth
             across <strong>UT, CA, WA & NH</strong>
           </p>
 

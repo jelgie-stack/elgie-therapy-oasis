@@ -32,7 +32,7 @@ const About = () => {
               <div className="bg-card p-6 rounded-lg shadow-soft border border-primary/10">
                 <h3 className="font-semibold text-primary mb-2">Education & Experience</h3>
                 <ul className="space-y-2 text-muted-foreground">
-                  <li>• <strong>20 years</strong> licensed Marriage and Family Therapist</li>
+                  <li>• <strong>18+ years</strong> helping kids & teens thrive</li>
                   <li>• <strong>BA Psychology</strong> – Smith College</li>
                   <li>• <strong>MA Counseling Psychology</strong> – Santa Clara University</li>
                 </ul>
@@ -49,18 +49,17 @@ const About = () => {
             </div>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I believe in providing trauma-informed, evidence-based therapy with a warm, 
-              compassionate approach. Whether working with individuals, couples, or families, 
-              I create a safe space for healing and growth through play-based and traditional 
-              therapeutic methods.
+              Brigette Elgie is a trauma-informed Licensed Marriage & Family Therapist specializing in children, adolescents, and adults. 
+              I believe in providing evidence-based therapy with a warm, compassionate approach, creating a safe space for healing 
+              and growth through play-based and traditional therapeutic methods.
             </p>
 
             <div className="flex flex-wrap gap-3">
               <span className="bg-primary-light text-primary px-4 py-2 rounded-full text-sm font-medium">
-                Trauma Therapy
+                Child Therapy
               </span>
               <span className="bg-primary-light text-primary px-4 py-2 rounded-full text-sm font-medium">
-                Family Therapy
+                Teen Therapy
               </span>
               <span className="bg-primary-light text-primary px-4 py-2 rounded-full text-sm font-medium">
                 EMDR

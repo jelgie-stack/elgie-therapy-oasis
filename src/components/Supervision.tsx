@@ -18,8 +18,8 @@ const Supervision = () => {
     },
     {
       icon: "🎯",
-      title: "Diverse Caseload",
-      description: "Children, couples, trauma, grief & more"
+      title: "Child & Adolescent Focus",
+      description: "Gain pediatric hours and techniques"
     },
     {
       icon: "🧠",
