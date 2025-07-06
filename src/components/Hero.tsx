@@ -11,7 +11,7 @@ const Hero = ({ onVideoClick }: HeroProps) => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center">
+    <section id="hero" className="relative min-h-screen flex items-center" style={{ marginTop: '80px' }}>
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -26,20 +26,22 @@ const Hero = ({ onVideoClick }: HeroProps) => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-2xl">
           <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-            Trauma-Informed Therapy for{" "}
-            <span className="text-primary">Kids</span>, <span className="text-primary">Teens</span> & <span className="text-primary">Adults</span> in Park City, Utah & Online
+            Child & Teen Therapist in Park City, UT – Trauma-Informed EMDR & ART
           </h1>
           
-          <p className="text-lg md:text-xl text-muted-foreground mb-4">
-            Expert care for anxiety, depression & ADHD.
-          </p>
-          
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-            Helping ages 4-18—and the adults who love them—overcome trauma in Park City & Telehealth
-            across <strong>UT, CA, WA & NH</strong>
+            Specialised care for anxiety, depression & ADHD.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 items-center">
+            <div className="flex-shrink-0 mb-6 sm:mb-0 sm:mr-8">
+              <img
+                src="/public/lovable-uploads/8b9bb41a-7d3d-4a40-b9a9-a71278293db1.png"
+                alt="Child therapy session Park City"
+                className="w-32 h-32 rounded-full object-cover border-4 border-primary/20"
+                loading="lazy"
+              />
+            </div>
             <Button 
               variant="cta" 
               size="lg" 
@@ -47,14 +49,6 @@ const Hero = ({ onVideoClick }: HeroProps) => {
               className="text-lg px-8 py-6"
             >
               Book an Appointment
-            </Button>
-            <Button 
-              variant="soft" 
-              size="lg" 
-              onClick={onVideoClick}
-              className="text-lg px-8 py-6"
-            >
-              Watch Intro Video
             </Button>
           </div>
 

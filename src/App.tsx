@@ -8,6 +8,9 @@ import NotFound from "./pages/NotFound";
 import ChildTherapistParkCity from "./pages/ChildTherapistParkCity";
 import TeenTherapistParkCity from "./pages/TeenTherapistParkCity";
 import EMDRTherapistParkCity from "./pages/EMDRTherapistParkCity";
+import AnxietyDepressionParkCity from "./pages/AnxietyDepressionParkCity";
+import ADHDTherapyParkCity from "./pages/ADHDTherapyParkCity";
+import ParentCoachingParkCity from "./pages/ParentCoachingParkCity";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +25,9 @@ const App = () => (
           <Route path="/child-therapist-park-city" element={<ChildTherapistParkCity />} />
           <Route path="/teen-therapist-park-city" element={<TeenTherapistParkCity />} />
           <Route path="/emdr-therapist-park-city" element={<EMDRTherapistParkCity />} />
+          <Route path="/anxiety-depression-therapy-park-city" element={<AnxietyDepressionParkCity />} />
+          <Route path="/adhd-therapy-park-city" element={<ADHDTherapyParkCity />} />
+          <Route path="/parent-coaching-park-city" element={<ParentCoachingParkCity />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

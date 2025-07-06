@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Specialties from "@/components/Specialties";
+import HowTherapyWorks from "@/components/HowTherapyWorks";
 import FeesInsurance from "@/components/FeesInsurance";
 import Reviews from "@/components/Reviews";
 import Supervision from "@/components/Supervision";
@@ -20,6 +21,7 @@ const Index = () => {
       <Hero onVideoClick={() => setIsVideoModalOpen(true)} />
       <About />
       <Specialties />
+      <HowTherapyWorks />
       <FeesInsurance />
       <Reviews />
       <Supervision />

@@ -4,14 +4,15 @@ const About = () => {
   return (
     <section id="about" className="py-20 bg-gradient-to-b from-background to-secondary/30">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-1 gap-12 items-center">
           {/* Portrait */}
-          <div className="relative">
+          <div className="relative max-w-2xl mx-auto">
             <div className="aspect-square rounded-2xl overflow-hidden shadow-card">
               <img
                 src={portraitUrl}
                 alt="Brigette Elgie, LMFT - Licensed therapist specializing in child and teen therapy in Park City, Utah"
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
             <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground px-6 py-2 rounded-full text-sm font-medium shadow-lg">
@@ -19,13 +20,41 @@ const About = () => {
             </div>
           </div>
 
-          {/* Content */}
+           {/* Content */}
           <div className="space-y-6">
-            <div>
-              <h2 className="text-4xl font-bold text-foreground mb-4">
-                About Brigette
-              </h2>
-              <div className="w-20 h-1 bg-accent rounded-full mb-6"></div>
+            <div className="flex items-start gap-6">
+              <div className="flex-shrink-0">
+                <img
+                  src={portraitUrl}
+                  alt="Brigette Elgie, LMFT - Child and Teen Therapist in Park City"
+                  className="w-40 h-40 rounded-full object-cover border-4 border-primary/20"
+                  loading="lazy"
+                />
+                <div className="flex justify-center gap-2 mt-4">
+                  <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+                    <span className="text-xs font-bold text-primary">AAMFT</span>
+                  </div>
+                  <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+                    <span className="text-xs font-bold text-primary">EMDR</span>
+                  </div>
+                  <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+                    <span className="text-xs font-bold text-primary">ART</span>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-1">
+                <div>
+                  <h2 className="text-4xl font-bold text-foreground mb-4">
+                    About Brigette
+                  </h2>
+                  <div className="w-20 h-1 bg-accent rounded-full mb-6"></div>
+                </div>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                  Brigette Elgie is a trauma-informed Licensed Marriage & Family Therapist specializing in children, adolescents, and adults. 
+                  I believe in providing evidence-based therapy with a warm, compassionate approach, creating a safe space for healing 
+                  and growth through play-based and traditional therapeutic methods.
+                </p>
+              </div>
             </div>
 
             <div className="space-y-4">
@@ -49,9 +78,7 @@ const About = () => {
             </div>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Brigette Elgie is a trauma-informed Licensed Marriage & Family Therapist specializing in children, adolescents, and adults. 
-              I believe in providing evidence-based therapy with a warm, compassionate approach, creating a safe space for healing 
-              and growth through play-based and traditional therapeutic methods.
+              Serving Park City, Utah and surrounding Summit County communities with compassionate, evidence-based therapy.
             </p>
 
             <div className="flex flex-wrap gap-3">
