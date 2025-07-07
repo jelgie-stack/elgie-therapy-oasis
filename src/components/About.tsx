@@ -2,7 +2,7 @@ const portraitUrl = "/lovable-uploads/8b9bb41a-7d3d-4a40-b9a9-a71278293db1.png";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-background to-secondary/30">
+    <section id="about" className="py-20 bg-gradient-to-b from-background to-secondary/30 scroll-mt-20">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-1 gap-12 items-center">
           {/* Portrait */}
@@ -26,7 +26,7 @@ const About = () => {
               <div className="flex-shrink-0">
                 <img
                   src={portraitUrl}
-                  alt="Brigette Elgie, LMFT - Child and Teen Therapist in Park City"
+                  alt="Brigette Elgie LMFT headshot"
                   className="w-40 h-40 rounded-full object-cover border-4 border-primary/20"
                   loading="lazy"
                 />

@@ -12,7 +12,7 @@ const VideoModal = ({ isOpen, onClose }: VideoModalProps) => {
         <DialogHeader>
           <DialogTitle>Introduction Video</DialogTitle>
         </DialogHeader>
-        <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
+        <div className="aspect-video bg-muted rounded-lg flex items-center justify-center min-h-[40vh]">
           <div className="text-center text-muted-foreground">
             <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
               <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 24 24">

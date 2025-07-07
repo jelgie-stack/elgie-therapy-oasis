@@ -23,6 +23,7 @@ const HowTherapyWorks = () => {
             <div 
               className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg flex items-center justify-center cursor-pointer hover:shadow-floating transition-all duration-300 min-h-[40vh]"
               onClick={() => setIsVideoOpen(true)}
+              style={{ height: '40vh' }}
             >
               <div className="text-center">
                 <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-primary/30 transition-colors">

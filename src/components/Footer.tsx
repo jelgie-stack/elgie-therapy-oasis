@@ -1,4 +1,11 @@
 const Footer = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <footer className="bg-primary text-primary-foreground py-12">
       <div className="container mx-auto px-4">
@@ -13,10 +20,54 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-sm text-primary-foreground/80">
-              <li>Individual Therapy</li>
-              <li>Couples Therapy</li>
-              <li>Family Therapy</li>
-              <li>Trauma Treatment (ART & EMDR)</li>
+              <li>
+                <button 
+                  onClick={() => window.location.href = "/child-therapist-park-city"}
+                  className="hover:text-primary-foreground transition-colors"
+                >
+                  Child Therapy
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => window.location.href = "/teen-therapist-park-city"}
+                  className="hover:text-primary-foreground transition-colors"
+                >
+                  Teen Therapy
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => window.location.href = "/emdr-therapist-park-city"}
+                  className="hover:text-primary-foreground transition-colors"
+                >
+                  EMDR & ART Trauma Therapy
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection("specialties")}
+                  className="hover:text-primary-foreground transition-colors"
+                >
+                  Anxiety & Depression
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection("specialties")}
+                  className="hover:text-primary-foreground transition-colors"
+                >
+                  ADHD Coaching
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection("specialties")}
+                  className="hover:text-primary-foreground transition-colors"
+                >
+                  Parent Coaching
+                </button>
+              </li>
             </ul>
           </div>
           

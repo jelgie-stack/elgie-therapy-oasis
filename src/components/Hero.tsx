@@ -11,13 +11,14 @@ const Hero = ({ onVideoClick }: HeroProps) => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center" style={{ marginTop: '80px' }}>
+    <section id="hero" className="relative min-h-screen flex items-center pt-16 scroll-mt-20">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
-          alt="Child trauma therapy session in Park City clinic with healing environment"
+          alt="child-therapy-park-city-office-healing-environment"
           className="w-full h-full object-cover"
+          loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60" />
       </div>
@@ -33,15 +34,7 @@ const Hero = ({ onVideoClick }: HeroProps) => {
             Specialised care for anxiety, depression & ADHD.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 items-center">
-            <div className="flex-shrink-0 mb-6 sm:mb-0 sm:mr-8">
-              <img
-                src="/public/lovable-uploads/8b9bb41a-7d3d-4a40-b9a9-a71278293db1.png"
-                alt="Child therapy session Park City"
-                className="w-32 h-32 rounded-full object-cover border-4 border-primary/20"
-                loading="lazy"
-              />
-            </div>
+          <div className="flex items-center gap-6">
             <Button 
               variant="cta" 
               size="lg" 
