@@ -4,22 +4,7 @@ const About = () => {
   return (
     <section id="about" className="py-20 bg-gradient-to-b from-background to-secondary/30 scroll-mt-20">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-1 gap-12 items-center">
-          {/* Portrait */}
-          <div className="relative max-w-2xl mx-auto">
-            <div className="aspect-square rounded-2xl overflow-hidden shadow-card">
-              <img
-                src={portraitUrl}
-                alt="Brigette Elgie, LMFT - Licensed therapist specializing in child and teen therapy in Park City, Utah"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
-            <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground px-6 py-2 rounded-full text-sm font-medium shadow-lg">
-              20+ Years Licensed
-            </div>
-          </div>
-
+        <div className="max-w-4xl mx-auto">
            {/* Content */}
           <div className="space-y-6">
             <div className="flex items-start gap-6">
