@@ -47,12 +47,6 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-4 flex-wrap">
             <button
-              onClick={() => scrollToSection("hero")}
-              className="text-sm text-foreground hover:text-primary transition-colors"
-            >
-              Home
-            </button>
-            <button
               onClick={() => navigateToPage("/child-therapist-park-city")}
               className="text-sm text-foreground hover:text-primary transition-colors"
             >
@@ -111,12 +105,6 @@ const Navbar = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden absolute top-16 left-0 right-0 bg-background/95 backdrop-blur-md shadow-lg border-t border-border">
             <div className="container mx-auto px-4 py-4 space-y-4">
-              <button
-                onClick={() => scrollToSection("hero")}
-                className="block w-full text-left text-foreground hover:text-primary transition-colors"
-              >
-                Home
-              </button>
               <button
                 onClick={() => navigateToPage("/child-therapist-park-city")}
                 className="block w-full text-left text-foreground hover:text-primary transition-colors"
