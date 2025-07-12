@@ -16,27 +16,13 @@ const FeesInsurance = () => {
           <div className="w-20 h-1 bg-accent rounded-full mx-auto mb-6"></div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Fees */}
+        <div className="grid lg:grid-cols-3 gap-8">
+          {/* Standard Session */}
           <div className="bg-card p-8 rounded-xl shadow-card">
-            <h3 className="text-2xl font-semibold text-primary mb-6">
-              Session Fees
-            </h3>
-            <div className="space-y-6 mb-6">
-              <div className="border-l-4 border-accent pl-6">
-                <h4 className="font-semibold text-foreground mb-2">Standard 50-min Session</h4>
-                <p className="text-2xl font-bold text-primary mb-2">$180</p>
-                <p className="text-muted-foreground text-sm">Scholarships available for qualifying families</p>
-              </div>
-              <div className="border-l-4 border-primary pl-6 bg-primary-light/50 -ml-6 pl-6 py-4 rounded-r-lg">
-                <h4 className="font-semibold text-primary mb-2">Free 15-Minute Consultation</h4>
-                <p className="text-muted-foreground text-sm mb-4">
-                  Get to know each other and see if we're a good fit
-                </p>
-                <Button variant="cta" size="sm" onClick={handleConsultation}>
-                  Schedule Consultation
-                </Button>
-              </div>
+            <div className="border-l-4 border-accent pl-6">
+              <h4 className="font-semibold text-foreground mb-2">Standard 50-min Session</h4>
+              <p className="text-2xl font-bold text-primary mb-2">$180</p>
+              <p className="text-muted-foreground text-sm">Scholarships available for qualifying families</p>
             </div>
           </div>
 
@@ -81,6 +67,19 @@ const FeesInsurance = () => {
                 <p className="text-muted-foreground text-sm">Evidence-based strategies for home</p>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Free Consultation - Positioned directly under Standard Session */}
+        <div className="grid lg:grid-cols-3 gap-8 mt-8">
+          <div className="bg-card p-8 rounded-xl shadow-card border-l-4 border-primary bg-primary-light/50">
+            <h4 className="font-semibold text-primary mb-2">Free 15-Minute Consultation</h4>
+            <p className="text-muted-foreground text-sm mb-4">
+              Get to know each other and see if we're a good fit
+            </p>
+            <Button variant="cta" size="sm" onClick={handleConsultation}>
+              Schedule Consultation
+            </Button>
           </div>
         </div>
 
