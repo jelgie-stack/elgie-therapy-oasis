@@ -70,8 +70,8 @@ const FeesInsurance = () => {
           </div>
         </div>
 
-        {/* Free Consultation - Positioned directly under Standard Session */}
-        <div className="grid lg:grid-cols-3 gap-8 mt-8">
+        {/* Free Consultation - Full width on desktop, normal on mobile */}
+        <div className="mt-8">
           <div className="bg-card p-8 rounded-xl shadow-card border-l-4 border-primary bg-primary-light/50">
             <h4 className="font-semibold text-primary mb-2">Free 15-Minute Consultation</h4>
             <p className="text-muted-foreground text-sm mb-4">
