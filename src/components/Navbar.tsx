@@ -41,7 +41,7 @@ const Navbar = () => {
             onClick={() => scrollToSection("hero")}
             className="text-lg font-bold text-primary hover:text-primary/80 transition-colors flex-wrap"
           >
-            Brigette Elgie, LMFT – <span className="font-extrabold">Child & Teen</span> Therapist
+            Brigette Elgie, LMFT
           </button>
 
           {/* Desktop Navigation */}
