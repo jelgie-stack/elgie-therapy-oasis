@@ -122,3 +122,15 @@
     @apply bg-background text-foreground;
   }
 }
+
+.seo-tagline {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  max-width: 600px;
+}
+
+@media (max-width: 600px) {
+  .seo-tagline {
+    display: none;
+  }
+}

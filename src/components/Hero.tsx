@@ -26,12 +26,12 @@ const Hero = ({ onVideoClick }: HeroProps) => {
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-2xl">
-          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-            Child & Teen Therapist in Park City, UT – Trauma-Informed EMDR & ART
+          <h1 style={{ fontSize: 'clamp(1.5rem, 3vw + 1rem, 2.5rem)' }} className="font-bold text-foreground mb-6 leading-tight">
+            Therapy that helps families thrive.
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-            Specialised care for anxiety, depression & ADHD.
+          <p className="seo-tagline">
+            Child & Teen Therapist in Park City, UT – Trauma-Informed EMDR & ART. Specialised care for anxiety, depression & ADHD.
           </p>
 
           <div className="flex items-center gap-6">
