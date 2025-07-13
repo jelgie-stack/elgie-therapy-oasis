@@ -123,16 +123,6 @@
   }
 }
 
-@layer components {
-  /* Target only oversized sections on desktop */
-  @media (min-width: 1200px) {
-    .section--spacious {
-      padding-block: clamp(2rem, 4vh, 3rem);
-      max-height: 90vh;
-    }
-  }
-}
-
 .seo-tagline {
   font-size: 0.9rem;
   margin-top: 0.5rem;
