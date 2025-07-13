@@ -124,13 +124,12 @@
 }
 
 @layer components {
-  .section {
-    padding-block: clamp(2rem, 6vh, 4rem);
-  }
-  
-  .section-tall {
-    max-height: 90vh;
-    overflow: hidden;
+  /* Target only oversized sections on desktop */
+  @media (min-width: 1200px) {
+    .section--spacious {
+      padding-block: clamp(5rem, 8vh, 7rem);
+      max-height: 94vh;
+    }
   }
 }
 

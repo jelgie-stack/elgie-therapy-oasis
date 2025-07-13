@@ -13,7 +13,7 @@ const Hero = ({ onVideoClick }: HeroProps) => {
   };
 
   return (
-    <section id="hero" className="relative section-tall flex items-center pt-16 scroll-mt-20">
+    <section id="hero" className="relative min-h-screen section--spacious flex items-center pt-16 scroll-mt-20">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img

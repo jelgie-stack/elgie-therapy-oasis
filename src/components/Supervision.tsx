@@ -44,7 +44,7 @@ const Supervision = () => {
   ];
 
   return (
-    <section id="supervision" className="section bg-gradient-to-b from-background to-secondary/30">
+    <section id="supervision" className="py-20 section--spacious bg-gradient-to-b from-background to-secondary/30">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
