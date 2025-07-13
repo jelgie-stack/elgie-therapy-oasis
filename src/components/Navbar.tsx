@@ -15,14 +15,6 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-    setIsMobileMenuOpen(false);
-  };
-
   const navigateToPage = (url: string) => {
     window.location.href = url;
     setIsMobileMenuOpen(false);
@@ -37,12 +29,12 @@ const Navbar = () => {
     <header className="fixed top-0 left-0 right-0 z-50 h-16 bg-background/95 backdrop-blur-md shadow-md transition-all duration-300">
       <div className="container mx-auto px-4 h-full">
         <div className="flex items-center justify-between h-full">
-          <button
-            onClick={() => scrollToSection("hero")}
+          <a
+            href="/"
             className="text-lg font-bold text-primary hover:text-primary/80 transition-colors flex-wrap"
           >
             Brigette Elgie, LMFT
-          </button>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-4 flex-wrap">
@@ -64,24 +56,24 @@ const Navbar = () => {
             >
               EMDR & ART
             </button>
-            <button
-              onClick={() => scrollToSection("fees")}
+            <a
+              href="/#fees"
               className="text-sm text-foreground hover:text-primary transition-colors"
             >
               Fees
-            </button>
-            <button
-              onClick={() => scrollToSection("reviews")}
+            </a>
+            <a
+              href="/#reviews"
               className="text-sm text-foreground hover:text-primary transition-colors"
             >
               Reviews
-            </button>
-            <button
-              onClick={() => scrollToSection("contact")}
+            </a>
+            <a
+              href="/#contact"
               className="text-sm text-foreground hover:text-primary transition-colors"
             >
               Contact
-            </button>
+            </a>
             <Button variant="cta" onClick={handleBooking} size="sm">
               Book
             </Button>
@@ -123,24 +115,27 @@ const Navbar = () => {
               >
                 EMDR & ART
               </button>
-              <button
-                onClick={() => scrollToSection("fees")}
+              <a
+                href="/#fees"
+                onClick={() => setIsMobileMenuOpen(false)}
                 className="block w-full text-left text-foreground hover:text-primary transition-colors"
               >
                 Fees
-              </button>
-              <button
-                onClick={() => scrollToSection("reviews")}
+              </a>
+              <a
+                href="/#reviews"
+                onClick={() => setIsMobileMenuOpen(false)}
                 className="block w-full text-left text-foreground hover:text-primary transition-colors"
               >
                 Reviews
-              </button>
-              <button
-                onClick={() => scrollToSection("contact")}
+              </a>
+              <a
+                href="/#contact"
+                onClick={() => setIsMobileMenuOpen(false)}
                 className="block w-full text-left text-foreground hover:text-primary transition-colors"
               >
                 Contact
-              </button>
+              </a>
             </div>
           </div>
         )}
