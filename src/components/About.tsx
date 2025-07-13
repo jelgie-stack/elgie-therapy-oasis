@@ -2,7 +2,7 @@ const portraitUrl = "/lovable-uploads/8b9bb41a-7d3d-4a40-b9a9-a71278293db1.png";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-background to-secondary/30 scroll-mt-20">
+    <section id="about" className="section bg-gradient-to-b from-background to-secondary/30 scroll-mt-20">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
            {/* Content */}

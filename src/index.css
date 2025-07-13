@@ -123,6 +123,17 @@
   }
 }
 
+@layer components {
+  .section {
+    padding-block: clamp(2rem, 6vh, 4rem);
+  }
+  
+  .section-tall {
+    max-height: 90vh;
+    overflow: hidden;
+  }
+}
+
 .seo-tagline {
   font-size: 0.9rem;
   margin-top: 0.5rem;

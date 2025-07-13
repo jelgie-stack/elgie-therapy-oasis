@@ -7,7 +7,7 @@ const FeesInsurance = () => {
   };
 
   return (
-    <section id="fees" className="py-20 bg-gradient-to-b from-secondary/30 to-background scroll-mt-20">
+    <section id="fees" className="section bg-gradient-to-b from-secondary/30 to-background scroll-mt-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">

@@ -11,7 +11,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-b from-secondary/30 to-primary-light/20 scroll-mt-20">
+    <section id="contact" className="section bg-gradient-to-b from-secondary/30 to-primary-light/20 scroll-mt-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">
