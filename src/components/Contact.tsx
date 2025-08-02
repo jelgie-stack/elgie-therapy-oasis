@@ -24,8 +24,44 @@ const Contact = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* CTA Section - Featured First on Desktop */}
+          <div className="order-2 lg:order-1 lg:col-span-2 xl:col-span-1 mb-8 lg:mb-0 text-center lg:text-left space-y-6">
+            <div className="bg-gradient-to-br from-primary-light/30 to-accent-light/20 border border-primary/10 p-8 rounded-2xl shadow-floating hover:shadow-xl hover:scale-[1.02] transition-all duration-300 focus-within:ring-2 focus-within:ring-primary/20 focus-within:ring-offset-2">
+              <h3 className="text-3xl lg:text-4xl font-bold text-primary mb-6">
+                Start Your Healing Journey Today
+              </h3>
+              <p className="text-muted-foreground mb-8 leading-relaxed text-lg">
+                Whether you're dealing with trauma, relationship challenges, or seeking personal growth, 
+                I'm here to help. Book your appointment or start with a free consultation to see if we're a good fit.
+              </p>
+              
+              <div className="space-y-4">
+                <Button 
+                  variant="cta" 
+                  size="lg" 
+                  onClick={handleBooking}
+                  className="w-full text-lg py-6 hover:scale-105 transition-transform duration-200"
+                >
+                  Book an Appointment
+                </Button>
+                <Button 
+                  variant="soft" 
+                  size="lg" 
+                  onClick={handleConsultation}
+                  className="w-full text-lg py-6 hover:scale-105 transition-transform duration-200"
+                >
+                  Free 15-min Consultation
+                </Button>
+              </div>
+
+              <p className="text-sm text-muted-foreground mt-6">
+                All appointments are scheduled through Headway for your convenience and insurance coordination.
+              </p>
+            </div>
+          </div>
+
           {/* Contact Info */}
-          <div className="space-y-8">
+          <div className="order-1 lg:order-2 space-y-8">
             <Card className="p-6">
               <CardContent className="p-0">
                 <h3 className="text-xl font-semibold text-primary mb-4">
@@ -68,42 +104,6 @@ const Contact = () => {
                 </div>
               </CardContent>
             </Card>
-          </div>
-
-          {/* CTA Section */}
-          <div className="text-center lg:text-left space-y-6">
-            <div className="bg-card p-8 rounded-xl shadow-card">
-              <h3 className="text-2xl font-semibold text-primary mb-4">
-                Start Your Healing Journey Today
-              </h3>
-              <p className="text-muted-foreground mb-8 leading-relaxed">
-                Whether you're dealing with trauma, relationship challenges, or seeking personal growth, 
-                I'm here to help. Book your appointment or start with a free consultation to see if we're a good fit.
-              </p>
-              
-              <div className="space-y-4">
-                <Button 
-                  variant="cta" 
-                  size="lg" 
-                  onClick={handleBooking}
-                  className="w-full text-lg py-6"
-                >
-                  Book an Appointment
-                </Button>
-                <Button 
-                  variant="soft" 
-                  size="lg" 
-                  onClick={handleConsultation}
-                  className="w-full text-lg py-6"
-                >
-                  Free 15-min Consultation
-                </Button>
-              </div>
-
-              <p className="text-sm text-muted-foreground mt-4">
-                All appointments are scheduled through Headway for your convenience and insurance coordination.
-              </p>
-            </div>
           </div>
         </div>
       </div>
