@@ -16,8 +16,28 @@ const FeesInsurance = () => {
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
+          {/* Free Consultation - Featured First on Desktop */}
+          <div className="order-2 lg:order-1 lg:col-span-3 mt-6 lg:mt-0 mb-4 lg:mb-8">
+            <div className="bg-gradient-to-br from-primary-light/40 to-accent-light/30 border-2 border-primary/20 p-8 rounded-2xl shadow-floating hover:shadow-xl hover:scale-[1.02] transition-all duration-300 focus-within:ring-2 focus-within:ring-primary/30 focus-within:ring-offset-2">
+              <div className="text-center max-w-2xl mx-auto">
+                <h3 className="text-3xl lg:text-4xl font-bold text-primary mb-4">Free 15-Minute Consultation</h3>
+                <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
+                  Get to know each other and see if we're a good fit
+                </p>
+                <Button 
+                  variant="cta" 
+                  size="lg" 
+                  onClick={handleConsultation}
+                  className="text-lg px-8 py-4 hover:scale-105 transition-transform duration-200"
+                >
+                  Schedule Consultation
+                </Button>
+              </div>
+            </div>
+          </div>
+
           {/* Standard Session */}
-          <div className="bg-card p-8 rounded-xl shadow-card">
+          <div className="order-1 lg:order-2 bg-card p-8 rounded-xl shadow-card">
             <div className="border-l-4 border-accent pl-6">
               <h4 className="font-semibold text-foreground mb-2">Standard 50-min Session</h4>
               <p className="text-2xl font-bold text-primary mb-2">$180</p>
@@ -26,7 +46,7 @@ const FeesInsurance = () => {
           </div>
 
           {/* Insurance */}
-          <div className="bg-card p-8 rounded-xl shadow-card">
+          <div className="order-3 lg:order-3 bg-card p-8 rounded-xl shadow-card">
             <h3 className="text-2xl font-semibold text-primary mb-6">
               Insurance Accepted
             </h3>
@@ -50,7 +70,7 @@ const FeesInsurance = () => {
           </div>
 
           {/* Session Options */}
-          <div className="bg-card p-8 rounded-xl shadow-card">
+          <div className="order-4 lg:order-4 bg-card p-8 rounded-xl shadow-card">
             <h3 className="text-2xl font-semibold text-primary mb-6">
               Session Options
             </h3>
@@ -66,19 +86,6 @@ const FeesInsurance = () => {
                 <p className="text-muted-foreground text-sm">Evidence-based strategies for home</p>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Free Consultation - Full width on desktop, normal on mobile */}
-        <div className="mt-8">
-          <div className="bg-card p-8 rounded-xl shadow-card border-l-4 border-primary bg-primary-light/50">
-            <h4 className="font-semibold text-primary mb-2">Free 15-Minute Consultation</h4>
-            <p className="text-muted-foreground text-sm mb-4">
-              Get to know each other and see if we're a good fit
-            </p>
-            <Button variant="cta" size="sm" onClick={handleConsultation}>
-              Schedule Consultation
-            </Button>
           </div>
         </div>
 
