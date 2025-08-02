@@ -10,7 +10,7 @@ import {
 
 const ParentCoachingParkCity = () => {
   const handleBooking = () => {
-    window.open("https://headway.co/booking/brigette-elgie", "_blank");
+    window.open("https://care.headway.co/providers/brigette-elgie?utm_source=pem&utm_medium=direct_link&utm_campaign=142417", "_blank");
   };
 
   const faqs = [
