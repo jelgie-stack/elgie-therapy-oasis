@@ -7,7 +7,7 @@ const Contact = () => {
   };
 
   const handleConsultation = () => {
-    window.open("https://headway.co/booking/brigette-elgie", "_blank");
+    window.open("https://savvycal.com/brigettemft/15-minute-consultation", "_blank");
   };
 
   return (

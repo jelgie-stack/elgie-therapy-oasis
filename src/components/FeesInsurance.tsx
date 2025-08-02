@@ -2,8 +2,7 @@ import { Button } from "@/components/ui/button";
 
 const FeesInsurance = () => {
   const handleConsultation = () => {
-    // This would open a different Headway slot for consultations
-    window.open("https://headway.co/booking/brigette-elgie", "_blank");
+    window.open("https://savvycal.com/brigettemft/15-minute-consultation", "_blank");
   };
 
   return (
