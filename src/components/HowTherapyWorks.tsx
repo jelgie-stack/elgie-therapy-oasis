@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Play } from "lucide-react";
 
 const HowTherapyWorks = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -18,22 +19,50 @@ const HowTherapyWorks = () => {
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="bg-card p-8 rounded-xl shadow-card border border-primary/10">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-card p-6 rounded-xl shadow-card border border-primary/10">
             <div 
-              className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg flex items-center justify-center cursor-pointer hover:shadow-floating transition-all duration-300 min-h-[40vh]"
+              className="relative w-full max-h-[600px] bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg overflow-hidden cursor-pointer hover:shadow-floating transition-all duration-300 group"
               onClick={() => setIsVideoOpen(true)}
-              style={{ height: '40vh' }}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  setIsVideoOpen(true);
+                }
+              }}
+              aria-label="Play therapy introduction video"
             >
-              <div className="text-center">
-                <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-primary/30 transition-colors">
-                  <svg className="w-10 h-10 text-primary" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z"/>
-                  </svg>
+              {/* Responsive 16:9 container */}
+              <div className="aspect-video flex items-center justify-center">
+                {/* Video thumbnail background (placeholder) */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-light/20 to-accent-light/20"></div>
+                
+                {/* Content overlay */}
+                <div className="relative z-10 text-center">
+                  {/* Play button */}
+                  <div className="w-20 h-20 bg-primary/90 hover:bg-primary rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+                    <Play 
+                      size={32} 
+                      className="text-primary-foreground ml-1"
+                      fill="currentColor"
+                    />
+                  </div>
+                  
+                  {/* Title and description */}
+                  <h3 className="text-2xl font-bold text-foreground mb-3">How Therapy Helps</h3>
+                  <p className="text-muted-foreground text-lg max-w-md mx-auto">
+                    Learn about the therapeutic process and what makes it effective
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Watch: How Therapy Helps</h3>
-                <p className="text-muted-foreground">Learn about the therapeutic process and what makes it effective</p>
               </div>
+            </div>
+            
+            {/* Fallback text for accessibility */}
+            <div className="sr-only">
+              Video: Introduction to how therapy works and its benefits. 
+              Click to play the video in a modal dialog.
             </div>
           </div>
         </div>
@@ -46,9 +75,11 @@ const HowTherapyWorks = () => {
             <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
               <div className="text-center text-muted-foreground">
                 <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z"/>
-                  </svg>
+                  <Play 
+                    size={24} 
+                    className="text-primary ml-0.5"
+                    fill="currentColor"
+                  />
                 </div>
                 <p className="text-lg font-medium">Video Coming Soon</p>
                 <p className="text-sm">Placeholder for therapeutic process explanation video</p>
