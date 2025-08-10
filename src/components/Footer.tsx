@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -114,6 +116,17 @@ const Footer = () => {
               </ul>
             </div>
           </div>
+        </div>
+
+        <div className="mt-8 flex justify-center">
+          <Button
+            data-contact-cta="true"
+            variant="cta"
+            size="lg"
+            aria-label="Book a session now"
+          >
+            Book now
+          </Button>
         </div>
         
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
