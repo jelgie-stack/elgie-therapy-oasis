@@ -6,6 +6,8 @@ const Footer = () => {
     }
   };
 
+  const siteUrl = typeof window !== 'undefined' ? window.location.origin : 'https://elgie-therapy-oasis.com';
+
   return (
     <footer className="bg-primary text-primary-foreground py-12">
       <div className="container mx-auto px-4">
@@ -88,6 +90,26 @@ const Footer = () => {
           </p>
         </div>
       </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Brigette Elgie, MFT, PLLC",
+            "telephone": "+1-949-648-7004",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "3080 Pinebrook Rd Suite 1100",
+              "addressLocality": "Park City",
+              "addressRegion": "UT",
+              "postalCode": "84098",
+              "addressCountry": "US"
+            },
+            "url": siteUrl
+          })
+        }}
+      />
     </footer>
   );
 };
