@@ -56,12 +56,12 @@ const Navbar = () => {
             >
               EMDR & ART
             </button>
-            <a
-              href="/#fees"
+            <button
+              onClick={() => navigateToPage("/insurance-fees")}
               className="text-sm text-foreground hover:text-primary transition-colors"
             >
               Fees
-            </a>
+            </button>
             <a
               href="/#reviews"
               className="text-sm text-foreground hover:text-primary transition-colors"
@@ -115,13 +115,12 @@ const Navbar = () => {
               >
                 EMDR & ART
               </button>
-              <a
-                href="/#fees"
-                onClick={() => setIsMobileMenuOpen(false)}
+              <button
+                onClick={() => navigateToPage("/insurance-fees")}
                 className="block w-full text-left text-foreground hover:text-primary transition-colors"
               >
                 Fees
-              </a>
+              </button>
               <a
                 href="/#reviews"
                 onClick={() => setIsMobileMenuOpen(false)}
