@@ -71,7 +71,7 @@ const FeesInsurance = () => {
               I work with Headway to provide in-network therapy services, making therapy more accessible and affordable.
             </p>
             <div className="mt-4 text-center">
-              <Button variant="cta" asChild>
+              <Button variant="cta" size="lg" asChild className="text-lg py-6">
                 <a 
                   href="https://care.headway.co/providers/brigette-elgie?utm_source=pem&utm_medium=direct_link&utm_campaign=142417"
                   target="_blank"
