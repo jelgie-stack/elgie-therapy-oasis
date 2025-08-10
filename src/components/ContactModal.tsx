@@ -54,8 +54,8 @@ export function ContactModal({ isOpen, onClose, triggerRef }: ContactModalProps)
     if (isOpen && !isSuccess) {
       setSubmitStartTime(Date.now());
       // Analytics event
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'contact_modal_open', {
+      if (typeof (window as any).gtag !== 'undefined') {
+        (window as any).gtag('event', 'contact_modal_open', {
           event_category: 'engagement',
           event_label: window.location.pathname,
         });
@@ -178,8 +178,8 @@ export function ContactModal({ isOpen, onClose, triggerRef }: ContactModalProps)
       setIsSuccess(true);
       
       // Analytics event
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'contact_form_submit', {
+      if (typeof (window as any).gtag !== 'undefined') {
+        (window as any).gtag('event', 'contact_form_submit', {
           event_category: 'engagement',
           event_label: window.location.pathname,
         });
