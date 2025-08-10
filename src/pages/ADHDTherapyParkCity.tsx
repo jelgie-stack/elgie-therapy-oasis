@@ -10,7 +10,9 @@ import {
 
 const ADHDTherapyParkCity = () => {
   const handleBooking = () => {
-    window.open("https://care.headway.co/providers/brigette-elgie?utm_source=pem&utm_medium=direct_link&utm_campaign=142417", "_blank");
+    if (typeof window !== 'undefined') {
+      window.open("https://care.headway.co/providers/brigette-elgie?utm_source=pem&utm_medium=direct_link&utm_campaign=142417", "_blank");
+    }
   };
 
   const faqs = [
@@ -68,7 +70,11 @@ const ADHDTherapyParkCity = () => {
               <Button 
                 variant="soft" 
                 size="lg" 
-                onClick={() => window.location.href = "/#contact"}
+                 onClick={() => {
+                   if (typeof window !== 'undefined') {
+                     window.location.href = "/#contact";
+                   }
+                 }}
                 className="text-lg px-8 py-6"
               >
                 Contact for Questions

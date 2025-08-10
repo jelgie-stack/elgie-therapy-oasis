@@ -6,7 +6,9 @@ import Footer from "@/components/Footer";
 
 const InsuranceFees = () => {
   const handleBooking = () => {
-    window.open("https://care.headway.co/providers/brigette-elgie?utm_source=pem&utm_medium=direct_link&utm_campaign=142417", "_blank");
+    if (typeof window !== 'undefined') {
+      window.open("https://care.headway.co/providers/brigette-elgie?utm_source=pem&utm_medium=direct_link&utm_campaign=142417", "_blank");
+    }
   };
 
   return (

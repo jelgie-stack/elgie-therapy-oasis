@@ -17,10 +17,13 @@ export const pingGoogleSitemap = async () => {
   }
 };
 
-// Auto-ping on app load (once per session)
+// Auto-ping on app load (once per session) - SSR safe
 let hasPinged = false;
 export const autoPingSitemap = () => {
-  if (!hasPinged && typeof window !== 'undefined') {
+  // Only run on client-side after hydration
+  if (typeof window === 'undefined') return;
+  
+  if (!hasPinged) {
     hasPinged = true;
     // Delay to avoid blocking initial load and ensure DOM is ready
     setTimeout(() => {

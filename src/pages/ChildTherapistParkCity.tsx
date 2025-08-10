@@ -11,7 +11,9 @@ import {
 
 const ChildTherapistParkCity = () => {
   const handleBooking = () => {
-    window.open("https://care.headway.co/providers/brigette-elgie?utm_source=site&utm_medium=cta&utm_campaign=child_therapy", "_blank");
+    if (typeof window !== 'undefined') {
+      window.open("https://care.headway.co/providers/brigette-elgie?utm_source=site&utm_medium=cta&utm_campaign=child_therapy", "_blank");
+    }
   };
 
   const breadcrumbs = [
@@ -129,7 +131,11 @@ const ChildTherapistParkCity = () => {
               <Button 
                 variant="soft" 
                 size="lg" 
-                onClick={() => window.location.href = "/#contact"}
+                 onClick={() => {
+                   if (typeof window !== 'undefined') {
+                     window.location.href = "/#contact";
+                   }
+                 }}
                 className="text-lg px-8 py-6"
               >
                 Contact for Questions

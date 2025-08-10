@@ -21,6 +21,9 @@ const SEOHead = ({
   const location = useLocation();
   
   useEffect(() => {
+    // Only run on client-side after hydration
+    if (typeof window === 'undefined' || typeof document === 'undefined') return;
+    
     // Update canonical URL
     const canonical = canonicalUrl || `https://elgietherapy.com${location.pathname}`;
     let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;

@@ -7,6 +7,9 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
+    // Only add scroll listener on client-side
+    if (typeof window === 'undefined') return;
+    
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
@@ -16,12 +19,16 @@ const Navbar = () => {
   }, []);
 
   const navigateToPage = (url: string) => {
-    window.location.href = url;
+    if (typeof window !== 'undefined') {
+      window.location.href = url;
+    }
     setIsMobileMenuOpen(false);
   };
 
   const handleBooking = () => {
-    window.open("https://care.headway.co/providers/brigette-elgie?utm_source=pem&utm_medium=direct_link&utm_campaign=142417", "_blank");
+    if (typeof window !== 'undefined') {
+      window.open("https://care.headway.co/providers/brigette-elgie?utm_source=pem&utm_medium=direct_link&utm_campaign=142417", "_blank");
+    }
     setIsMobileMenuOpen(false);
   };
 

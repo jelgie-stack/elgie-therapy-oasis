@@ -10,12 +10,16 @@ const Hero = ({ onVideoClick }: HeroProps) => {
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
+    // Only add scroll listener on client-side
+    if (typeof window === 'undefined') return;
+    
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToContact = () => {
+    if (typeof document === 'undefined') return;
     const element = document.getElementById("contact");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -72,6 +76,7 @@ const Hero = ({ onVideoClick }: HeroProps) => {
           size={32} 
           className="text-primary animate-bounce cursor-pointer hover:text-primary/80 transition-colors"
           onClick={() => {
+            if (typeof document === 'undefined') return;
             const aboutSection = document.querySelector('section:nth-of-type(2)');
             if (aboutSection) {
               aboutSection.scrollIntoView({ behavior: 'smooth' });
