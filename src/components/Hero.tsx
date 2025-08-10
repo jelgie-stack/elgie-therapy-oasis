@@ -45,7 +45,7 @@ const Hero = ({ onVideoClick }: HeroProps) => {
           </h1>
           
           <p className="tagline text-muted-foreground mb-8 leading-relaxed">
-            Child &amp; Teen Therapist in Park City, UT – Trauma-Informed EMDR &amp; ART. Specialised care for anxiety, depression &amp; ADHD.
+            Family, Child &amp; Teen Therapist in Park City, UT – Trauma-Informed EMDR &amp; ART. Specialised care for anxiety, depression &amp; ADHD.
           </p>
 
           <a 
