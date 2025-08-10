@@ -22,7 +22,39 @@ let hasPinged = false;
 export const autoPingSitemap = () => {
   if (!hasPinged && typeof window !== 'undefined') {
     hasPinged = true;
-    // Delay to avoid blocking initial load
-    setTimeout(pingGoogleSitemap, 5000);
+    // Delay to avoid blocking initial load and ensure DOM is ready
+    setTimeout(() => {
+      pingGoogleSitemap();
+      console.log('Sitemap auto-ping completed for SEO optimization');
+    }, 5000);
+  }
+};
+
+// Enhanced sitemap ping with better error handling
+export const pingGoogleSitemapEnhanced = async () => {
+  if (typeof window === 'undefined') return;
+  
+  try {
+    // Primary Google ping
+    await fetch(
+      `https://www.google.com/ping?sitemap=${encodeURIComponent('https://elgietherapy.com/sitemap.xml')}`,
+      { 
+        method: 'GET',
+        mode: 'no-cors' 
+      }
+    );
+    
+    // Bing ping as fallback
+    await fetch(
+      `https://www.bing.com/ping?sitemap=${encodeURIComponent('https://elgietherapy.com/sitemap.xml')}`,
+      { 
+        method: 'GET',
+        mode: 'no-cors' 
+      }
+    );
+    
+    console.log('Search engine sitemap notifications sent');
+  } catch (error) {
+    console.log('Sitemap ping attempted (CORS expected):', error);
   }
 };

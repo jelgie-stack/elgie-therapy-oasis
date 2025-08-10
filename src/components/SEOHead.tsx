@@ -7,6 +7,7 @@ interface SEOHeadProps {
   canonicalUrl?: string;
   ogImage?: string;
   breadcrumbs?: Array<{ name: string; url: string }>;
+  jsonLd?: object[];
 }
 
 const SEOHead = ({ 
@@ -14,7 +15,8 @@ const SEOHead = ({
   description, 
   canonicalUrl, 
   ogImage = "https://elgietherapy.com/img/brigette-hero-desktop.webp",
-  breadcrumbs = []
+  breadcrumbs = [],
+  jsonLd = []
 }: SEOHeadProps) => {
   const location = useLocation();
   
@@ -107,6 +109,19 @@ const SEOHead = ({
       breadcrumbScript.textContent = JSON.stringify(breadcrumbSchema);
     }
 
+    // Add additional JSON-LD schemas
+    jsonLd.forEach((schema, index) => {
+      const schemaId = `schema-${index}`;
+      let schemaScript = document.querySelector(`script[data-schema="${schemaId}"]`) as HTMLScriptElement;
+      if (!schemaScript) {
+        schemaScript = document.createElement('script');
+        schemaScript.type = 'application/ld+json';
+        schemaScript.setAttribute('data-schema', schemaId);
+        document.head.appendChild(schemaScript);
+      }
+      schemaScript.textContent = JSON.stringify(schema);
+    });
+
     // Force HTTPS redirect (client-side fallback)
     if (window.location.protocol === 'http:' && window.location.hostname !== 'localhost') {
       window.location.replace(window.location.href.replace('http:', 'https:'));
@@ -117,7 +132,7 @@ const SEOHead = ({
       window.location.replace(window.location.href.replace('www.', ''));
     }
 
-  }, [title, description, canonicalUrl, ogImage, breadcrumbs, location]);
+  }, [title, description, canonicalUrl, ogImage, breadcrumbs, jsonLd, location]);
 
   return null;
 };
