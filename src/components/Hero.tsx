@@ -49,12 +49,12 @@ const Hero = ({ onVideoClick }: HeroProps) => {
           </p>
 
           <a 
-            href="https://savvycal.com/brigettemft/15-minute-consultation?d=15&sid=9649f451-4fde-45c3-af7f-9719dd5230a9&from=2025-08-03" 
+            href="https://care.headway.co/providers/brigette-elgie?utm_source=pem&utm_medium=direct_link&utm_campaign=142417" 
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-accent text-accent-foreground px-8 py-3 rounded-lg font-medium hover:bg-accent/90 transition-all duration-300 hover:-translate-y-1"
           >
-            Book a free consult
+            Check my insurance and book now
           </a>
 
           <div className="mt-8 text-sm text-muted-foreground">

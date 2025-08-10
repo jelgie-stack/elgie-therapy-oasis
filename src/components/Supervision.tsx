@@ -77,7 +77,7 @@ const Supervision = () => {
               <h3 className="text-xl font-semibold text-accent-foreground mb-2">
                 2 Associate Spots Open for Fall 2025
               </h3>
-              <p className="text-accent-foreground">Apply by August 15th</p>
+              <p className="text-accent-foreground">Apply now</p>
             </CardContent>
           </Card>
         </div>

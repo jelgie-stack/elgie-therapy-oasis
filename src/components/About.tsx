@@ -25,6 +25,9 @@ const About = () => {
                   <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
                     <span className="text-xs font-bold text-primary">ART</span>
                   </div>
+                  <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+                    <span className="text-xs font-bold text-primary">CMI</span>
+                  </div>
                 </div>
               </div>
               <div className="flex-1">
@@ -58,8 +61,8 @@ const About = () => {
                   <li>• <strong>Master Practitioner in ART</strong> (Accelerated Resolution Therapy)</li>
                   <li>• <strong>EMDR Trained</strong> (Eye Movement Desensitization and Reprocessing)</li>
                   <li>• <strong>Trauma-Informed Care</strong> specialist</li>
-                  <li>• Adult Trauma Therapy</li>
-                  <li>• Critical Memory Integration</li>
+                  <li>• <strong>Adult Trauma Therapy</strong></li>
+                  <li>• <strong>Critical Memory Integration</strong></li>
                 </ul>
               </div>
             </div>
