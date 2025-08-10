@@ -227,18 +227,6 @@ export function ContactModal({ isOpen, onClose, triggerRef }: ContactModalProps)
           <DialogTitle id="contact-modal-title">
             Contact for Questions
           </DialogTitle>
-          <DialogClose asChild>
-            <Button 
-              variant="ghost" 
-              size="icon"
-              className="absolute right-4 top-4"
-              onClick={handleClose}
-              disabled={isSubmitting}
-              aria-label="Close dialog"
-            >
-              <X className="h-4 w-4" />
-            </Button>
-          </DialogClose>
         </DialogHeader>
 
         {isSuccess ? (
