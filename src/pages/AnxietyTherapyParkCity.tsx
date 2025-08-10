@@ -3,23 +3,26 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 const AnxietyTherapyParkCity = () => {
   const handleBooking = () => {
     window.open("https://care.headway.co/providers/brigette-elgie?utm_source=pem&utm_medium=direct_link&utm_campaign=142417", "_blank");
   };
 
+  const breadcrumbs = [
+    { name: "Home", url: "https://elgietherapy.com/" },
+    { name: "Anxiety Therapy in Park City", url: "https://elgietherapy.com/anxiety-therapy-park-city" }
+  ];
+
   return (
     <>
-      {/* SEO Meta Tags */}
-      <head>
-        <title>Anxiety Therapist Park City, UT | Brigette Elgie, LMFT</title>
-        <meta 
-          name="description" 
-          content="Evidence-based anxiety treatment in Park City, UT – therapy for panic, social anxiety & chronic worry with Brigette Elgie, LMFT. In-person or telehealth. Free 15-min consult." 
-        />
-        <link rel="canonical" href="https://brigetteelgie.com/anxiety-therapy-park-city" />
-      </head>
+      <SEOHead 
+        title="Anxiety Therapist Park City, UT | Evidence-Based Care – Brigette Elgie, LMFT"
+        description="Evidence-based anxiety treatment in Park City, UT – therapy for panic, social anxiety & chronic worry with Brigette Elgie, LMFT. In-person or telehealth. Free 15-min consult."
+        canonicalUrl="https://elgietherapy.com/anxiety-therapy-park-city"
+        breadcrumbs={breadcrumbs}
+      />
 
       <div className="min-h-screen">
         <Navbar />
@@ -280,6 +283,51 @@ const AnxietyTherapyParkCity = () => {
               </Accordion>
             </div>
           </div>
+          
+          {/* FAQ Schema */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "How long will therapy take?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "While every client differs, many anxiety-specific treatment plans run 8–16 sessions. We'll review progress every four sessions and adapt as needed."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Can I switch to telehealth if I'm traveling?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Yes, as long as you're physically located in Utah, WA, or NH at session time. Headway's video platform is HIPAA-secure."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Do you prescribe medication?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "No, but I collaborate with primary-care doctors and psychiatrists in Park City if medication could enhance your therapy results."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What if I'm already seeing a psychiatrist?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Great—integrated care often speeds recovery. With your permission, I'll coordinate to align goals and reduce overlap."
+                    }
+                  }
+                ]
+              })
+            }}
+          />
         </section>
 
         {/* Closing section */}

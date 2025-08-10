@@ -1,15 +1,29 @@
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 const ChildTherapistParkCity = () => {
   const handleBooking = () => {
     window.open("https://care.headway.co/providers/brigette-elgie?utm_source=pem&utm_medium=direct_link&utm_campaign=142417", "_blank");
   };
 
+  const breadcrumbs = [
+    { name: "Home", url: "https://elgietherapy.com/" },
+    { name: "Child Therapist Park City", url: "https://elgietherapy.com/child-therapist-park-city" }
+  ];
+
   return (
-    <div className="min-h-screen">
-      <Navbar />
+    <>
+      <SEOHead 
+        title="Child Therapist Park City, UT | Play-Based Therapy – Brigette Elgie, LMFT"
+        description="Child therapist in Park City specializing in play-based therapy for ages 4-12. Treatment for anxiety, ADHD, behavioral issues & trauma. Parent coaching included."
+        canonicalUrl="https://elgietherapy.com/child-therapist-park-city"
+        breadcrumbs={breadcrumbs}
+      />
+      
+      <div className="min-h-screen">
+        <Navbar />
       
       <section className="py-20 bg-gradient-to-b from-background to-secondary/30">
         <div className="container mx-auto px-4">
@@ -87,8 +101,9 @@ const ChildTherapistParkCity = () => {
         </div>
       </section>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 

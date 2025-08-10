@@ -74,13 +74,30 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="font-semibold mb-4">Licensed In</h4>
-            <ul className="space-y-2 text-sm text-primary-foreground/80">
-              <li>Utah</li>
-              <li>California</li>
-              <li>Washington</li>
-              <li>New Hampshire</li>
-            </ul>
+            <h4 className="font-semibold mb-4">Contact</h4>
+            <div className="space-y-2 text-sm text-primary-foreground/80">
+              <div>
+                <strong>Brigette Elgie, MFT, PLLC</strong>
+              </div>
+              <div>
+                3080 Pinebrook Road, Suite 1100<br />
+                Park City, UT 84098
+              </div>
+              <div>
+                <a href="tel:+19496487004" className="hover:text-primary-foreground transition-colors">
+                  (949) 648-7004
+                </a>
+              </div>
+            </div>
+            <div className="mt-4">
+              <h5 className="font-medium mb-2 text-sm">Licensed In</h5>
+              <ul className="space-y-1 text-xs text-primary-foreground/70">
+                <li>Utah</li>
+                <li>California</li>
+                <li>Washington</li>
+                <li>New Hampshire</li>
+              </ul>
+            </div>
           </div>
         </div>
         
