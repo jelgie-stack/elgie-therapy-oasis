@@ -97,9 +97,13 @@ const Contact = () => {
                 <h3 className="text-xl font-semibold text-primary mb-4">
                   Session Hours
                 </h3>
-                <div className="space-y-2 text-muted-foreground">
-                  <p>Mondays, Wednesdays and Fridays, available at the Christian Center of Park City from 9 AM to 6 PM.</p>
-                </div>
+                  <div className="space-y-2 text-muted-foreground">
+                    <p>Tuesdays 9 AM to 5 PM</p>
+                    <p>Thursdays 9 AM to 5 PM</p>
+                    <p>Saturdays 9 AM to 5 PM</p>
+                    <p>Mondays, Wednesdays and Fridays, available at the Christian Center of Park City from 9 AM to 6 PM.</p>
+                    <p>Available evenings on request.</p>
+                  </div>
               </CardContent>
             </Card>
           </div>
