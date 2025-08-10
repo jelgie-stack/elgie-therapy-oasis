@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 const TeenTherapistParkCity = () => {
   const handleBooking = () => {
@@ -11,6 +12,15 @@ const TeenTherapistParkCity = () => {
 
   return (
     <div className="min-h-screen">
+      <SEOHead 
+        title="Teen Therapist Park City, UT | Adolescent Counseling – Brigette Elgie, LMFT"
+        description="Therapy for teens 13–18 in Park City: anxiety, depression, ADHD, identity, school stress. In-person Pinebrook or telehealth statewide. Book via Headway."
+        canonicalUrl="https://elgietherapy.com/teen-therapist-park-city"
+        breadcrumbs={[
+          { name: 'Home', url: 'https://elgietherapy.com/' },
+          { name: 'Teen Therapist in Park City', url: 'https://elgietherapy.com/teen-therapist-park-city' }
+        ]}
+      />
       <Navbar />
       
       <section className="py-20 bg-gradient-to-b from-background to-secondary/30">

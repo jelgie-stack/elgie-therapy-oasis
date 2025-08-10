@@ -2,6 +2,8 @@ import puppeteer from 'puppeteer';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import http from 'http';
+import url from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -21,14 +23,69 @@ const routes = [
 const distDir = path.join(__dirname, '../dist');
 const baseUrl = 'http://localhost:8080';
 
+const mimeTypes = {
+  '.html': 'text/html; charset=utf-8',
+  '.js': 'application/javascript; charset=utf-8',
+  '.css': 'text/css; charset=utf-8',
+  '.json': 'application/json; charset=utf-8',
+  '.svg': 'image/svg+xml',
+  '.png': 'image/png',
+  '.jpg': 'image/jpeg',
+  '.jpeg': 'image/jpeg',
+  '.webp': 'image/webp',
+  '.ico': 'image/x-icon',
+  '.woff2': 'font/woff2',
+  '.woff': 'font/woff',
+  '.ttf': 'font/ttf',
+  '.map': 'application/json'
+};
+
+function startStaticServer(dir, port) {
+  return new Promise((resolve) => {
+    const server = http.createServer((req, res) => {
+      const parsed = url.parse(req.url || '/').pathname || '/';
+      let filePath = path.join(dir, parsed);
+
+      if (fs.existsSync(filePath) && fs.statSync(filePath).isDirectory()) {
+        filePath = path.join(filePath, 'index.html');
+      }
+
+      if (!fs.existsSync(filePath)) {
+        filePath = path.join(dir, 'index.html');
+      }
+
+      const ext = path.extname(filePath);
+      const contentType = mimeTypes[ext] || 'application/octet-stream';
+
+      try {
+        const content = fs.readFileSync(filePath);
+        res.writeHead(200, { 'Content-Type': contentType });
+        res.end(content);
+      } catch {
+        res.writeHead(500);
+        res.end('Server Error');
+      }
+    });
+
+    server.listen(port, () => {
+      console.log(`Static server running at http://localhost:${port}`);
+      resolve(server);
+    });
+  });
+}
+
 async function prerender() {
   console.log('Starting pre-rendering process...');
   
+  if (!fs.existsSync(distDir)) {
+    console.error('✗ Dist directory not found. Build first with `vite build`.');
+    process.exit(1);
+  }
+  
+  const server = await startStaticServer(distDir, 8080);
+  
   const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
-  
-  // Wait for build server to be ready
-  await new Promise(resolve => setTimeout(resolve, 2000));
   
   for (const route of routes) {
     try {
@@ -36,15 +93,13 @@ async function prerender() {
       
       await page.goto(`${baseUrl}${route}`, { 
         waitUntil: 'networkidle0',
-        timeout: 30000 
+        timeout: 60000 
       });
       
-      // Wait for React hydration and any async content
       await page.waitForTimeout(2000);
       
       const html = await page.content();
       
-      // Create directory structure
       const routePath = route === '/' ? '/index' : route;
       const filePath = path.join(distDir, routePath, 'index.html');
       const dir = path.dirname(filePath);
@@ -62,7 +117,11 @@ async function prerender() {
   }
   
   await browser.close();
+  server.close();
   console.log('Pre-rendering complete!');
 }
 
-prerender().catch(console.error);
+prerender().catch((e) => {
+  console.error(e);
+  process.exit(1);
+});
