@@ -65,6 +65,8 @@ const InsuranceFees = () => {
                   <p><strong>Quest Behavioral Health</strong></p>
                   <p><strong>Anthem EAP</strong></p>
                   <p><strong>Carelon Behavioral Health</strong></p>
+                  <p><strong>SelectHealth</strong> – Utah</p>
+                  <p><strong>Anthem Blue Cross & Blue Shield NH</strong></p>
                 </div>
                 
                 <blockquote className="bg-accent-light/50 border-l-4 border-accent p-4 rounded-r-lg mb-6">
@@ -75,10 +77,8 @@ const InsuranceFees = () => {
 
                 <h3 className="text-xl font-semibold text-primary mb-4">Coming soon</h3>
                 <ul className="space-y-2 text-muted-foreground">
-                  <li>• SelectHealth – Utah</li>
                   <li>• UnitedHealthcare / Optum (Oscar, Oxford)</li>
                   <li>• Magellan</li>
-                  <li>• Anthem Blue Cross & Blue Shield NH</li>
                 </ul>
               </CardContent>
             </Card>
