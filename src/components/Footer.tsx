@@ -80,7 +80,12 @@ const Footer = () => {
                 <strong>Brigette Elgie, MFT, PLLC</strong>
               </div>
               <div>
-                <a href="https://www.google.com/maps?q=3080+Pinebrook+Road,+Suite+1100,+Park+City,+UT+84098" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground transition-colors">
+                <a
+                  href="https://www.google.com/maps?q=3080+Pinebrook+Road,+Suite+1100,+Park+City,+UT+84098"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary-foreground transition-colors"
+                >
                   3080 Pinebrook Road, Suite 1100<br />
                   Park City, UT 84098
                 </a>
@@ -89,6 +94,14 @@ const Footer = () => {
                 <a href="tel:+19496487004" className="hover:text-primary-foreground transition-colors">
                   (949) 648-7004
                 </a>
+              </div>
+              <div>
+                <button
+                  data-contact-cta="true"
+                  className="hover:text-primary-foreground transition-colors underline underline-offset-4"
+                >
+                  Contact for Questions
+                </button>
               </div>
             </div>
             <div className="mt-4">
