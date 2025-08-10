@@ -48,7 +48,7 @@ const Footer = () => {
               </li>
               <li>
                 <button 
-                  onClick={() => scrollToSection("specialties")}
+                  onClick={() => window.location.href = "/anxiety-therapy-park-city"}
                   className="hover:text-primary-foreground transition-colors"
                 >
                   Anxiety & Depression
