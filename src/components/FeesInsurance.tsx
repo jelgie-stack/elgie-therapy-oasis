@@ -78,6 +78,17 @@ const FeesInsurance = () => {
                 Check my insurance and book now.
               </a>
             </p>
+            <div className="mt-4">
+              <Button variant="cta" asChild>
+                <a 
+                  href="https://care.headway.co/providers/brigette-elgie?utm_source=pem&utm_medium=direct_link&utm_campaign=142417"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Check my insurance and book now
+                </a>
+              </Button>
+            </div>
           </div>
 
           {/* Session Options */}
