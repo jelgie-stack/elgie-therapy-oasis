@@ -68,17 +68,9 @@ const FeesInsurance = () => {
               </div>
             </div>
             <p className="text-sm text-muted-foreground">
-              I work with Headway to provide in-network therapy services, making therapy more accessible and affordable.{' '}
-              <a 
-                href="https://care.headway.co/providers/brigette-elgie?utm_source=pem&utm_medium=direct_link&utm_campaign=142417"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary underline-offset-4 hover:underline"
-              >
-                Check my insurance and book now.
-              </a>
+              I work with Headway to provide in-network therapy services, making therapy more accessible and affordable.
             </p>
-            <div className="mt-4">
+            <div className="mt-4 text-center">
               <Button variant="cta" asChild>
                 <a 
                   href="https://care.headway.co/providers/brigette-elgie?utm_source=pem&utm_medium=direct_link&utm_campaign=142417"
