@@ -198,28 +198,6 @@ const AnxietyTherapyParkCity = () => {
           </div>
         </section>
 
-        {/* Testimonial */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
-              What people say
-            </h2>
-            
-            <Card className="max-w-4xl mx-auto">
-              <CardContent className="p-8">
-                <blockquote className="bg-accent-light/50 border-l-4 border-accent p-6 rounded-r-lg">
-                  <p className="text-foreground italic text-lg mb-4">
-                    "I was skeptical that talking could beat the anxiety I'd lived with for 15 years. After 10 weeks with Brigette, I hiked Jupiter Peak without the usual panic halfway up."
-                  </p>
-                  <cite className="text-muted-foreground font-semibold">– K., Park City resident</cite>
-                </blockquote>
-                <p className="text-sm text-muted-foreground mt-4 italic">
-                  (Client testimonial shared with permission; initials changed for privacy.)
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
 
         {/* Fees & Insurance */}
         <section className="py-16 bg-secondary/30">

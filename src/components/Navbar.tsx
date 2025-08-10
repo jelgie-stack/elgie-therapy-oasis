@@ -70,12 +70,6 @@ const Navbar = () => {
               Fees
             </button>
             <a
-              href="/#reviews"
-              className="text-sm text-foreground hover:text-primary transition-colors"
-            >
-              Reviews
-            </a>
-            <a
               href="/#contact"
               className="text-sm text-foreground hover:text-primary transition-colors"
             >
@@ -134,13 +128,6 @@ const Navbar = () => {
               >
                 Fees
               </button>
-              <a
-                href="/#reviews"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block w-full text-left text-foreground hover:text-primary transition-colors"
-              >
-                Reviews
-              </a>
               <a
                 href="/#contact"
                 onClick={() => setIsMobileMenuOpen(false)}

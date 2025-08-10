@@ -5,7 +5,7 @@ import About from "@/components/About";
 import Specialties from "@/components/Specialties";
 import HowTherapyWorks from "@/components/HowTherapyWorks";
 import FeesInsurance from "@/components/FeesInsurance";
-import Reviews from "@/components/Reviews";
+
 import Supervision from "@/components/Supervision";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -34,7 +34,7 @@ const Index = () => {
       <Specialties />
       <HowTherapyWorks />
       <FeesInsurance />
-      <Reviews />
+      
       <Supervision />
       <Contact />
       <FAQ />
