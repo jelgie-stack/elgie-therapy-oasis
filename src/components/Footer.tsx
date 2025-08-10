@@ -80,8 +80,10 @@ const Footer = () => {
                 <strong>Brigette Elgie, MFT, PLLC</strong>
               </div>
               <div>
-                3080 Pinebrook Road, Suite 1100<br />
-                Park City, UT 84098
+                <a href="https://www.google.com/maps?q=3080+Pinebrook+Road,+Suite+1100,+Park+City,+UT+84098" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground transition-colors">
+                  3080 Pinebrook Road, Suite 1100<br />
+                  Park City, UT 84098
+                </a>
               </div>
               <div>
                 <a href="tel:+19496487004" className="hover:text-primary-foreground transition-colors">

@@ -116,7 +116,7 @@ const ChildTherapistParkCity = () => {
               <h2 className="text-2xl font-bold text-foreground mt-12 mb-6">In-person in Pinebrook or telehealth</h2>
               <p className="mb-4">My office is located at 3080 Pinebrook Road, Suite 1100, Park City, UT 84098—convenient to Pinebrook, Jeremy Ranch, Kimball Junction, and Park City Schools.</p>
               <p className="mb-4">I also offer secure telehealth sessions for Utah families when clinically appropriate. Many skills-based interventions translate well to video sessions, though younger children often benefit more from in-person work.</p>
-              <p className="mb-6">I'm licensed as an LMFT in Utah (#12345678), ensuring you receive qualified, professional care whether in-person or online.</p>
+              <p className="mb-6">I'm licensed as an LMFT in Utah (#9463019-3902), ensuring you receive qualified, professional care whether in-person or online.</p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 mt-8 mb-12">
@@ -182,7 +182,7 @@ const ChildTherapistParkCity = () => {
             {/* Trust Signals */}
             <div className="mt-16 p-6 bg-card rounded-lg border border-primary/10">
               <h3 className="text-xl font-semibold text-primary mb-4">Licensed & Experienced</h3>
-              <p className="text-muted-foreground mb-4">LMFT, Utah #12345678 • 8+ years specializing in child and family therapy</p>
+              <p className="text-muted-foreground mb-4">LMFT, Utah #9463019-3902 • 8+ years specializing in child and family therapy</p>
               <p className="text-muted-foreground italic">For client privacy and ethical guidelines, we don’t publish client reviews. If you have questions about fit or approach, please <a href="/#contact" className="underline text-primary hover:text-primary/80">reach out through our contact form</a>.</p>
             </div>
 
