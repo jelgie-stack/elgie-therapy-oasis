@@ -41,7 +41,7 @@ const FeesInsurance = () => {
             <div className="border-l-4 border-accent pl-6">
               <h4 className="font-semibold text-foreground mb-2">Standard 50-min Session</h4>
               <p className="text-2xl font-bold text-primary mb-2">$180</p>
-              <p className="text-muted-foreground text-sm">Scholarships available for qualifying families</p>
+              
             </div>
           </div>
 
@@ -67,6 +67,17 @@ const FeesInsurance = () => {
             <p className="text-sm text-muted-foreground">
               I work with Headway to provide in-network therapy services, making therapy more accessible and affordable.
             </p>
+            <p className="text-sm text-muted-foreground mt-3">And many others.</p>
+            <div className="mt-2">
+              <a 
+                href="https://care.headway.co/providers/brigette-elgie?utm_source=pem&utm_medium=direct_link&utm_campaign=142417"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary underline-offset-4 hover:underline"
+              >
+                Check my insurance and book now
+              </a>
+            </div>
           </div>
 
           {/* Session Options */}

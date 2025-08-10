@@ -46,9 +46,9 @@ const About = () => {
               <div className="bg-card p-6 rounded-lg shadow-soft border border-primary/10">
                 <h3 className="font-semibold text-primary mb-2">Education & Experience</h3>
                 <ul className="space-y-2 text-muted-foreground">
-                  <li>• <strong>18+ years</strong> helping kids & teens thrive</li>
-                  <li>• <strong>BA Psychology</strong> – Smith College</li>
-                  <li>• <strong>MA Counseling Psychology</strong> – Santa Clara University</li>
+                  <li>• <strong>20+ years</strong> helping kids & teens thrive</li>
+                  <li>• <strong>BA</strong> – Smith College</li>
+                  <li>• <strong>MA Counseling Psychology</strong> – Santa Clara University — Emphasis on Marriage and Family Therapy.</li>
                 </ul>
               </div>
 
@@ -58,6 +58,8 @@ const About = () => {
                   <li>• <strong>Master Practitioner in ART</strong> (Accelerated Resolution Therapy)</li>
                   <li>• <strong>EMDR Trained</strong> (Eye Movement Desensitization and Reprocessing)</li>
                   <li>• <strong>Trauma-Informed Care</strong> specialist</li>
+                  <li>• Adult Trauma Therapy</li>
+                  <li>• Critical Memory Integration</li>
                 </ul>
               </div>
             </div>

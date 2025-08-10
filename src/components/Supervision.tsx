@@ -7,7 +7,7 @@ const Supervision = () => {
   const [isApplicationModalOpen, setIsApplicationModalOpen] = useState(false);
 
   const handleInfoSession = () => {
-    window.open("https://headway.co/booking/brigette-elgie-intern", "_blank");
+    window.open("https://savvycal.com/brigettemft/15-minute-consultation?d=15&sid=9649f451-4fde-45c3-af7f-9719dd5230a9&from=2025-08-03", "_blank");
   };
 
   const benefits = [
@@ -55,7 +55,7 @@ const Supervision = () => {
           </h2>
           <div className="w-20 h-1 bg-accent rounded-full mx-auto mb-6"></div>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            <strong>Brigette Elgie, LMFT</strong> · AAMFT-Approved Supervisor · Licensed in <strong>UT | CA | WA | NH</strong>
+            <strong>Brigette Elgie, LMFT</strong> · Clinical Director and Supervisor · Licensed in <strong>UT | CA | WA | NH</strong>
           </p>
         </div>
 
