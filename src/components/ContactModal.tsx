@@ -147,10 +147,11 @@ export function ContactModal({ isOpen, onClose, triggerRef }: ContactModalProps)
     setErrors({});
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch(`https://iyfnaqvqytofesawninf.supabase.co/functions/v1/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml5Zm5hcXZxeXRvZmVzYXduaW5mIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ4NjA1MDksImV4cCI6MjA3MDQzNjUwOX0.h71bnUty2--IXFZoSkirwkY6jsu8ssqw3GLQYOPzpes'}`,
         },
         body: JSON.stringify({
           name: formData.name.trim(),
