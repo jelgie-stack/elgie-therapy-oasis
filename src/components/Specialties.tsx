@@ -26,7 +26,7 @@ const Specialties = () => {
       description: "CBT and skills-based interventions for managing anxiety and depression across all ages.",
       techniques: ["Cognitive Behavioral Therapy", "Mindfulness-Based Approaches", "Exposure Therapy"],
       anchor: "anxiety-depression-therapy-park-city",
-      route: "#specialties"
+      route: "/anxiety-therapy-park-city"
     },
     {
       title: "ADHD Behaviour Coaching",
