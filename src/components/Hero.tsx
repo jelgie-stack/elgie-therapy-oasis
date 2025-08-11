@@ -54,7 +54,7 @@ const Hero = ({ onVideoClick }: HeroProps) => {
 
           <div className="space-y-4">
             <a 
-              href="https://care.headway.co/providers/brigette-elgie?utm_source=site&utm_medium=hero_cta&utm_campaign=142417" 
+              href="https://care.headway.co/providers/brigette-elgie?utm_source=site&utm_medium=footer_cta&utm_campaign=142417" 
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block w-full sm:w-auto bg-accent text-accent-foreground px-6 sm:px-8 py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-accent/90 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 text-center"
