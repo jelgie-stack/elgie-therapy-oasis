@@ -25,13 +25,17 @@ const FeesInsurance = () => {
                   Get to know each other and see if we're a good fit
                 </p>
                 <Button 
-                  variant="cta" 
+                  variant="secondary" 
                   size="lg" 
                   onClick={handleConsultation}
-                  className="text-lg px-8 py-4 hover:scale-105 transition-transform duration-200"
+                  className="text-xl px-12 py-6 bg-green-600 hover:bg-green-700 text-white border-none shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-200 font-bold"
                 >
-                  Schedule Consultation
+                  Schedule Free Consultation
                 </Button>
+                
+                <p className="text-sm text-muted-foreground mt-4">
+                  HIPAA-Compliant • Licensed in Utah, California, Washington, New Hampshire
+                </p>
               </div>
             </div>
           </div>
