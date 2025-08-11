@@ -8,20 +8,20 @@ const HowTherapyWorks = () => {
 
   return (
     <section className="py-20 bg-gradient-to-b from-background to-secondary/30">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto" style={{ paddingInline: 'clamp(16px, 4vw, 24px)' }}>
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
+          <h2 style={{ fontSize: 'clamp(28px, 6vw, 36px)' }} className="font-bold text-foreground mb-4">
             How Therapy Works
           </h2>
           <div className="w-20 h-1 bg-accent rounded-full mx-auto mb-6"></div>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p style={{ fontSize: 'clamp(16px, 3vw, 18px)' }} className="text-muted-foreground max-w-2xl mx-auto">
             Understanding the therapeutic process and what to expect during your journey.
           </p>
         </div>
 
         {/* 3-Step Process */}
         <div className="max-w-4xl mx-auto mb-12">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">
                 1
@@ -49,9 +49,9 @@ const HowTherapyWorks = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="bg-card p-6 rounded-xl shadow-card border border-primary/10">
+          <div className="bg-card p-4 md:p-6 rounded-xl shadow-card border border-primary/10">
             <div 
-              className="relative w-full max-h-[600px] bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg overflow-hidden cursor-pointer hover:shadow-floating transition-all duration-300 group"
+              className="relative w-full bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg overflow-hidden cursor-pointer hover:shadow-floating transition-all duration-300 group"
               onClick={() => setIsVideoOpen(true)}
               role="button"
               tabIndex={0}
@@ -62,6 +62,7 @@ const HowTherapyWorks = () => {
                 }
               }}
               aria-label="Play therapy introduction video"
+              style={{ minHeight: '48px' }}
             >
               {/* Responsive 16:9 container */}
               <div className="aspect-video flex items-center justify-center">
@@ -69,19 +70,19 @@ const HowTherapyWorks = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-light/20 to-accent-light/20"></div>
                 
                 {/* Content overlay */}
-                <div className="relative z-10 text-center">
+                <div className="relative z-10 text-center px-4">
                   {/* Play button */}
-                  <div className="w-20 h-20 bg-primary/90 hover:bg-primary rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-primary/90 hover:bg-primary rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-110">
                     <Play 
-                      size={32} 
-                      className="text-primary-foreground ml-1"
+                      size={24} 
+                      className="text-primary-foreground ml-1 md:ml-1"
                       fill="currentColor"
                     />
                   </div>
                   
                   {/* Title and description */}
-                  <h3 className="text-2xl font-bold text-foreground mb-3">How Therapy Helps</h3>
-                  <p className="text-muted-foreground text-lg max-w-md mx-auto">
+                  <h3 style={{ fontSize: 'clamp(20px, 4vw, 28px)' }} className="font-bold text-foreground mb-3">How Therapy Helps</h3>
+                  <p style={{ fontSize: 'clamp(16px, 3vw, 18px)' }} className="text-muted-foreground max-w-md mx-auto">
                     Learn about the therapeutic process and what makes it effective
                   </p>
                 </div>

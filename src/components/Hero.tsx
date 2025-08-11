@@ -42,32 +42,33 @@ const Hero = ({ onVideoClick }: HeroProps) => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto relative z-10" style={{ paddingInline: 'clamp(16px, 4vw, 24px)' }}>
         <div className="max-w-2xl">
-          <h1 style={{ fontSize: 'clamp(1.5rem, 3vw + 1rem, 2.5rem)' }} className="font-bold text-foreground mb-6 leading-tight">
+          <h1 style={{ fontSize: 'clamp(28px, 6vw, 40px)' }} className="font-bold text-foreground mb-6 leading-tight">
             Therapy that helps families thrive.
           </h1>
           
-          <p className="tagline text-muted-foreground mb-8 leading-relaxed">
+          <p className="text-muted-foreground mb-8 leading-relaxed" style={{ fontSize: 'clamp(16px, 3vw, 18px)' }}>
             Evidence‑based therapy in Park City, UT — in‑person or telehealth — to help you or your child feel calmer, more confident, and connected.
           </p>
 
-          <div className="space-y-4">
+          <div className="space-y-4 max-w-sm sm:max-w-none">
             <a 
               href="https://care.headway.co/providers/brigette-elgie?utm_source=site&utm_medium=footer_cta&utm_campaign=142417" 
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block w-full sm:w-auto bg-accent text-accent-foreground px-6 sm:px-8 py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-accent/90 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 text-center"
+              className="block w-full min-w-0 max-w-full bg-accent text-accent-foreground px-6 py-4 rounded-lg font-semibold text-center hover:bg-accent/90 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+              style={{ fontSize: 'clamp(16px, 4vw, 18px)', minHeight: '48px', lineHeight: '1.2' }}
             >
               Check My Insurance & Book Now
             </a>
             
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-muted-foreground text-center sm:text-left">
               Takes 2 minutes — no cost, no obligation.
             </p>
           </div>
 
-          <div className="mt-8 text-sm text-muted-foreground">
+          <div className="mt-8 text-sm text-muted-foreground text-center sm:text-left">
             <p>Licensed in Utah, California, Washington & New Hampshire</p>
           </div>
         </div>

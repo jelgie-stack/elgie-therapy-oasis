@@ -7,14 +7,14 @@ const FinalCTA = () => {
 
   return (
     <section className="py-24 bg-gradient-to-br from-primary/10 via-accent/5 to-primary/5">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto" style={{ paddingInline: 'clamp(16px, 4vw, 24px)' }}>
         <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-white/80 backdrop-blur-sm p-12 md:p-16 rounded-3xl shadow-2xl border border-primary/10">
-            <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
+          <div className="bg-white/80 backdrop-blur-sm p-8 md:p-16 rounded-3xl shadow-2xl border border-primary/10">
+            <h2 style={{ fontSize: 'clamp(32px, 8vw, 56px)' }} className="font-bold text-foreground mb-6 leading-tight">
               Start Your <span className="text-primary">Healing Journey</span> Today
             </h2>
             
-            <p className="text-xl md:text-2xl text-muted-foreground mb-6 leading-relaxed">
+            <p style={{ fontSize: 'clamp(18px, 4vw, 24px)' }} className="text-muted-foreground mb-6 leading-relaxed">
               Let's talk — you'll leave your free call with a clear plan forward.
             </p>
             
@@ -28,7 +28,8 @@ const FinalCTA = () => {
               variant="secondary" 
               size="lg" 
               onClick={handleBooking}
-              className="text-2xl px-16 py-8 bg-primary hover:bg-primary/90 text-primary-foreground border-none shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300 font-bold rounded-2xl"
+              className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground border-none shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300 font-bold rounded-2xl"
+              style={{ fontSize: 'clamp(18px, 4vw, 24px)', padding: 'clamp(16px, 3vw, 32px) clamp(32px, 6vw, 64px)', minHeight: '48px' }}
             >
               Book a Consultation
             </Button>

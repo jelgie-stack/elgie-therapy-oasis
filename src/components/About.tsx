@@ -3,19 +3,19 @@ const portraitUrl = "/lovable-uploads/8b9bb41a-7d3d-4a40-b9a9-a71278293db1.png";
 const About = () => {
   return (
     <section id="about" className="py-20 bg-gradient-to-b from-background to-secondary/30 scroll-mt-20">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto" style={{ paddingInline: 'clamp(16px, 4vw, 24px)' }}>
         <div className="max-w-4xl mx-auto">
            {/* Content */}
           <div className="space-y-6">
-            <div className="flex items-start gap-6">
-              <div className="flex-shrink-0">
+            <div className="flex flex-col sm:flex-row items-start gap-6">
+              <div className="flex-shrink-0 w-full sm:w-auto text-center sm:text-left">
                 <img
                   src={portraitUrl}
                   alt="Brigette Elgie LMFT headshot"
-                  className="w-40 h-40 rounded-full object-cover border-4 border-primary/20"
+                  className="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover border-4 border-primary/20 mx-auto sm:mx-0"
                   loading="lazy"
                 />
-                <div className="flex justify-center gap-2 mt-4">
+                <div className="flex justify-center gap-2 mt-4 flex-wrap">
                   <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
                     <span className="text-xs font-bold text-primary">AAMFT</span>
                   </div>
@@ -30,14 +30,14 @@ const About = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex-1">
+              <div className="flex-1 text-center sm:text-left">
                 <div>
-                  <h2 className="text-4xl font-bold text-foreground mb-4">
+                  <h2 style={{ fontSize: 'clamp(28px, 6vw, 36px)' }} className="font-bold text-foreground mb-4">
                     About Brigette
                   </h2>
-                  <div className="w-20 h-1 bg-accent rounded-full mb-6"></div>
+                  <div className="w-20 h-1 bg-accent rounded-full mx-auto sm:mx-0 mb-6"></div>
                 </div>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                <p style={{ fontSize: 'clamp(16px, 3vw, 18px)' }} className="text-muted-foreground leading-relaxed mb-6">
                   Brigette Elgie is a trauma-informed Licensed Marriage & Family Therapist specializing in children, adolescents, and adults. 
                   I believe in providing evidence-based therapy with a warm, compassionate approach, creating a safe space for healing 
                   and growth through play-based and traditional therapeutic methods.

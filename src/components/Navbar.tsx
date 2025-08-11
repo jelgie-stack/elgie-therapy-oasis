@@ -82,12 +82,13 @@ const Navbar = () => {
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
-            <Button size="sm" variant="cta" onClick={handleBooking}>
+            <Button size="sm" variant="cta" onClick={handleBooking} style={{ minHeight: '48px', minWidth: '48px' }}>
               Book
             </Button>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 text-foreground hover:text-primary transition-colors"
+              className="p-3 text-foreground hover:text-primary transition-colors"
+              style={{ minHeight: '48px', minWidth: '48px' }}
               aria-label={isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
               aria-expanded={isMobileMenuOpen}
               aria-controls="mobile-navigation"
@@ -103,35 +104,40 @@ const Navbar = () => {
             id="mobile-navigation"
             className="md:hidden absolute top-16 left-0 right-0 bg-background/95 backdrop-blur-md shadow-lg border-t border-border"
           >
-            <div className="container mx-auto px-4 py-4 space-y-4">
+            <div className="container mx-auto px-4 py-4 space-y-2">
               <button
                 onClick={() => navigateToPage("/child-therapist-park-city")}
-                className="block w-full text-left text-foreground hover:text-primary transition-colors"
+                className="block w-full text-left text-foreground hover:text-primary transition-colors py-3 px-2"
+                style={{ minHeight: '48px' }}
               >
                 Child Therapy
               </button>
               <button
                 onClick={() => navigateToPage("/teen-therapist-park-city")}
-                className="block w-full text-left text-foreground hover:text-primary transition-colors"
+                className="block w-full text-left text-foreground hover:text-primary transition-colors py-3 px-2"
+                style={{ minHeight: '48px' }}
               >
                 Teen Therapy
               </button>
               <button
                 onClick={() => navigateToPage("/emdr-therapist-park-city")}
-                className="block w-full text-left text-foreground hover:text-primary transition-colors"
+                className="block w-full text-left text-foreground hover:text-primary transition-colors py-3 px-2"
+                style={{ minHeight: '48px' }}
               >
                 EMDR & ART
               </button>
               <button
                 onClick={() => navigateToPage("/insurance-fees")}
-                className="block w-full text-left text-foreground hover:text-primary transition-colors"
+                className="block w-full text-left text-foreground hover:text-primary transition-colors py-3 px-2"
+                style={{ minHeight: '48px' }}
               >
                 Fees
               </button>
               <a
                 href="/#contact"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block w-full text-left text-foreground hover:text-primary transition-colors"
+                className="block w-full text-left text-foreground hover:text-primary transition-colors py-3 px-2"
+                style={{ minHeight: '48px' }}
               >
                 Contact
               </a>
