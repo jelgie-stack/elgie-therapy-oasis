@@ -271,7 +271,7 @@ const InsuranceFees = () => {
                     Can I use telehealth if I'm traveling?
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">
-                    Brigette can only see clients located in Utah, Washington, or New Hampshire at the time of the session due to licensure rules.
+                    Brigette can only see clients located in Utah, California, Washington, or New Hampshire at the time of the session due to licensure rules.
                   </AccordionContent>
                 </AccordionItem>
 
