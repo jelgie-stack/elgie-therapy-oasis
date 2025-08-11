@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import heroImage from "@/assets/hero-therapy-office.jpg";
 
 interface HeroProps {
   onVideoClick: () => void;
@@ -33,12 +33,10 @@ const Hero = ({ onVideoClick }: HeroProps) => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/img/brigette-hero-desktop.webp"
-          alt="warm therapist with client in Park City therapy office"
+          src={heroImage}
+          alt="child-therapy-park-city-office-healing-environment"
           className="w-full h-full object-cover"
           loading="eager"
-          width={1920}
-          height={1280}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60" />
       </div>
@@ -47,33 +45,23 @@ const Hero = ({ onVideoClick }: HeroProps) => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-2xl">
           <h1 style={{ fontSize: 'clamp(1.5rem, 3vw + 1rem, 2.5rem)' }} className="font-bold text-foreground mb-6 leading-tight">
-            Helping children, teens, and adults overcome anxiety, strengthen relationships, and thrive.
+            Therapy that helps families thrive.
           </h1>
           
           <p className="tagline text-muted-foreground mb-8 leading-relaxed">
-            Evidence‑based therapy in Park City, UT — in‑person or telehealth — to help you or your child feel calmer, more confident, and connected.
+            Family, Child &amp; Teen Therapist in Park City, UT – Trauma-Informed EMDR &amp; ART. Specialised care for anxiety, depression &amp; ADHD.
           </p>
 
-          <Button
-            asChild
-            variant="cta"
-            size="lg"
-            aria-label="Check my insurance and book now"
+          <a 
+            href="https://care.headway.co/providers/brigette-elgie?utm_source=pem&utm_medium=direct_link&utm_campaign=142417" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-accent text-accent-foreground px-8 py-3 rounded-lg font-medium hover:bg-accent/90 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
           >
-            <a
-              href="https://care.headway.co/providers/brigette-elgie?utm_source=pem&utm_medium=direct_link&utm_campaign=142417&utm_source=site&utm_medium=hero_cta"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Check my insurance & book now
-            </a>
-          </Button>
+            Check my insurance and book now
+          </a>
 
-          <p className="mt-2 text-xs text-muted-foreground">
-            Takes 2 minutes — no cost, no obligation.
-          </p>
-
-          <div className="mt-6 text-sm text-muted-foreground">
+          <div className="mt-8 text-sm text-muted-foreground">
             <p>Licensed in Utah, California, Washington & New Hampshire</p>
           </div>
         </div>
