@@ -121,9 +121,9 @@ const HowTherapyWorks = () => {
             variant="cta" 
             size="lg"
             onClick={() => window.open("https://care.headway.co/providers/brigette-elgie?utm_source=site&utm_medium=process_cta&utm_campaign=142417", "_blank")}
-            className="text-lg px-10 py-4"
+            className="text-lg px-8 py-4 whitespace-nowrap"
           >
-            Check my insurance & book now
+            Check Insurance & Book
           </Button>
         </div>
           </DialogContent>

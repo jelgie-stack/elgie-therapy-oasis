@@ -57,9 +57,9 @@ const Hero = ({ onVideoClick }: HeroProps) => {
               href="https://care.headway.co/providers/brigette-elgie?utm_source=site&utm_medium=hero_cta&utm_campaign=142417" 
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-accent text-accent-foreground px-10 py-4 rounded-lg font-semibold text-lg hover:bg-accent/90 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+              className="inline-block bg-accent text-accent-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-accent/90 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 text-center min-w-fit"
             >
-              Check my insurance & book now
+              Check Insurance & Book
             </a>
             
             <p className="text-sm text-muted-foreground">
