@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 const FinalCTA = () => {
   const handleBooking = () => {
-    window.open("https://care.headway.co/providers/brigette-elgie?utm_source=site&utm_medium=final_cta&utm_campaign=142417", "_blank");
+    window.open("https://savvycal.com/brigettemft/15-minute-consultation?utm_source=site&utm_medium=final_cta", "_blank");
   };
 
   return (
