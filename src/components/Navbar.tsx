@@ -69,12 +69,6 @@ const Navbar = () => {
             >
               Fees
             </button>
-            <button
-              onClick={() => navigateToPage("/supervision-consulting")}
-              className="text-sm text-foreground hover:text-primary transition-colors"
-            >
-              Supervision
-            </button>
             <a
               href="/#contact"
               className="text-sm text-foreground hover:text-primary transition-colors"
@@ -133,12 +127,6 @@ const Navbar = () => {
                 className="block w-full text-left text-foreground hover:text-primary transition-colors"
               >
                 Fees
-              </button>
-              <button
-                onClick={() => navigateToPage("/supervision-consulting")}
-                className="block w-full text-left text-foreground hover:text-primary transition-colors"
-              >
-                Supervision
               </button>
               <a
                 href="/#contact"

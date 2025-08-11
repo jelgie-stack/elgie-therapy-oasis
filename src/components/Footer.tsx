@@ -81,6 +81,14 @@ const Footer = () => {
                   Parent Coaching
                 </button>
               </li>
+              <li>
+                <button 
+                  onClick={() => window.location.href = "/supervision-consulting"}
+                  className="hover:text-primary-foreground transition-colors"
+                >
+                  Clinical Supervision
+                </button>
+              </li>
             </ul>
           </div>
           
