@@ -45,21 +45,27 @@ const Hero = ({ onVideoClick }: HeroProps) => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-2xl">
           <h1 style={{ fontSize: 'clamp(1.5rem, 3vw + 1rem, 2.5rem)' }} className="font-bold text-foreground mb-6 leading-tight">
-            Therapy that helps families thrive.
+            Helping children, teens, and adults overcome anxiety, strengthen relationships, and thrive.
           </h1>
           
           <p className="tagline text-muted-foreground mb-8 leading-relaxed">
-            Family, Child &amp; Teen Therapist in Park City, UT – Trauma-Informed EMDR &amp; ART. Specialised care for anxiety, depression &amp; ADHD.
+            Evidence‑based therapy in Park City, UT — in‑person or telehealth — to help you or your child feel calmer, more confident, and connected.
           </p>
 
-          <a 
-            href="https://care.headway.co/providers/brigette-elgie?utm_source=pem&utm_medium=direct_link&utm_campaign=142417" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-accent text-accent-foreground px-8 py-3 rounded-lg font-medium hover:bg-accent/90 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-          >
-            Check my insurance and book now
-          </a>
+          <div className="space-y-4">
+            <a 
+              href="https://care.headway.co/providers/brigette-elgie?utm_source=site&utm_medium=hero_cta&utm_campaign=142417" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-primary text-primary-foreground px-10 py-4 rounded-lg font-semibold text-lg hover:bg-primary/90 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+            >
+              Check my insurance & book now
+            </a>
+            
+            <p className="text-sm text-muted-foreground">
+              Takes 2 minutes — no cost, no obligation.
+            </p>
+          </div>
 
           <div className="mt-8 text-sm text-muted-foreground">
             <p>Licensed in Utah, California, Washington & New Hampshire</p>
