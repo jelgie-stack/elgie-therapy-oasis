@@ -16,6 +16,7 @@ const routes = [
   '/anxiety-depression-therapy-park-city',
   '/adhd-therapy-park-city',
   '/parent-coaching-park-city',
+  '/supervision-consulting',
   '/insurance-fees',
   '/anxiety-therapy-park-city'
 ];
