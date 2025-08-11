@@ -33,7 +33,7 @@ const Footer = () => {
           
           <div>
             <h4 className="font-semibold mb-4">Services</h4>
-            <ul className="space-y-2 text-sm text-primary-foreground/80">
+            <ul className="space-y-1 text-sm text-primary-foreground/80">
               <li>
                 <button 
                   onClick={() => window.location.href = "/child-therapist-park-city"}
