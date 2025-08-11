@@ -18,7 +18,9 @@ export default defineConfig(({ mode }) => ({
           router: ['react-router-dom']
         }
       }
-    }
+    },
+    // Ensure XML files are copied to dist
+    assetsInclude: ['**/*.xml']
   },
   plugins: [
     react(),
