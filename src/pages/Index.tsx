@@ -5,8 +5,7 @@ import About from "@/components/About";
 import Specialties from "@/components/Specialties";
 import HowTherapyWorks from "@/components/HowTherapyWorks";
 import FeesInsurance from "@/components/FeesInsurance";
-
-import Supervision from "@/components/Supervision";
+import SupervisionCard from "@/components/SupervisionCard";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import VideoModal from "@/components/VideoModal";
@@ -35,9 +34,9 @@ const Index = () => {
       <HowTherapyWorks />
       <FeesInsurance />
       
-      <Supervision />
       <Contact />
       <FAQ />
+      <SupervisionCard />
       <Footer />
       <VideoModal 
         isOpen={isVideoModalOpen} 
