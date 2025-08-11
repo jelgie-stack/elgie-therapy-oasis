@@ -16,6 +16,14 @@ const FAQ = () => {
       answer: "Yes, I accept several major insurance plans and also offer telehealth sessions for clients throughout Utah, California, Washington, and New Hampshire. Please contact my office to verify your specific insurance coverage."
     },
     {
+      question: "What happens after I click \"Book Now\"?",
+      answer: "You'll be guided through Headway to check your benefits and see your exact copay. Then you can choose a time that works and book online."
+    },
+    {
+      question: "Do you offer evening or weekend sessions?",
+      answer: "Yes—limited evening and Saturday availability. If you don't see a time that works, message us and we'll try to accommodate."
+    },
+    {
       question: "What is EMDR and ART therapy?",
       answer: "EMDR (Eye Movement Desensitization and Reprocessing) and ART (Accelerated Resolution Therapy) are evidence-based treatments for trauma and PTSD. As a Master Practitioner in ART and EMDR-trained therapist, I use these techniques to help clients process traumatic experiences effectively."
     },

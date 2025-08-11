@@ -6,6 +6,7 @@ import Specialties from "@/components/Specialties";
 import HowTherapyWorks from "@/components/HowTherapyWorks";
 import FeesInsurance from "@/components/FeesInsurance";
 import SupervisionCard from "@/components/SupervisionCard";
+import FinalCTA from "@/components/FinalCTA";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import VideoModal from "@/components/VideoModal";
@@ -35,6 +36,7 @@ const Index = () => {
       <FeesInsurance />
       
       <Contact />
+      <FinalCTA />
       <FAQ />
       <SupervisionCard />
       <Footer />
