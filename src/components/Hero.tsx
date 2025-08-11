@@ -52,13 +52,18 @@ const Hero = ({ onVideoClick }: HeroProps) => {
             Evidence‑based therapy in Park City, UT — in‑person or telehealth — to help you or your child feel calmer, more confident, and connected.
           </p>
 
-          <div className="space-y-4 max-w-sm sm:max-w-none">
+          <div className="space-y-4 flex flex-col items-center sm:items-start">
             <a 
               href="https://care.headway.co/providers/brigette-elgie?utm_source=site&utm_medium=footer_cta&utm_campaign=142417" 
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full min-w-0 max-w-full bg-accent text-accent-foreground px-6 py-4 rounded-lg font-semibold text-center hover:bg-accent/90 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
-              style={{ fontSize: 'clamp(16px, 4vw, 18px)', minHeight: '48px', lineHeight: '1.2' }}
+              className="inline-flex items-center justify-center bg-accent text-accent-foreground rounded-lg font-semibold hover:bg-accent/90 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 max-w-[90vw] sm:max-w-none"
+              style={{ 
+                fontSize: 'clamp(16px, 4vw, 18px)', 
+                minHeight: '48px', 
+                lineHeight: '1.2',
+                padding: '0.75em 1.5em'
+              }}
             >
               Check My Insurance & Book Now
             </a>
