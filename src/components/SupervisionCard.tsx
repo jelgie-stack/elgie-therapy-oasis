@@ -20,7 +20,7 @@ const SupervisionCard = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <div className="bg-teal-200 rounded-lg px-4 py-2">
-                  <span className="text-black font-medium">⏳ 2 spots open for Fall 2025</span>
+                  <span className="text-primary font-bold">⏳ 2 spots open for Fall 2025</span>
                 </div>
                 
                 <Button 
