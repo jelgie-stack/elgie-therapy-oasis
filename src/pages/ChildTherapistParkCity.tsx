@@ -182,7 +182,7 @@ const ChildTherapistParkCity = () => {
             {/* Trust Signals */}
             <div className="mt-16 p-6 bg-card rounded-lg border border-primary/10">
               <h3 className="text-xl font-semibold text-primary mb-4">Licensed & Experienced</h3>
-              <p className="text-muted-foreground mb-4">LMFT, Utah #9463019-3902 • 8+ years specializing in child and family therapy</p>
+              <p className="text-muted-foreground mb-4">LMFT, Utah #9463019-3902 • 20+ years specializing in child and family therapy</p>
               <p className="text-muted-foreground italic">For client privacy and ethical guidelines, we don’t publish client reviews. If you have questions about fit or approach, please <a href="/#contact" className="underline text-primary hover:text-primary/80">reach out through our contact form</a>.</p>
             </div>
 
