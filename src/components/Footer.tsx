@@ -53,7 +53,7 @@ const Footer = () => {
             <div>
               <nav aria-label="Footer Services">
                 <h3 className="font-semibold mb-4">Services</h3>
-                <ul className="space-y-3 text-sm">
+                <ul className="space-y-2 text-sm">
                   <li>
                     <a 
                       href="/anxiety-therapy-park-city"
