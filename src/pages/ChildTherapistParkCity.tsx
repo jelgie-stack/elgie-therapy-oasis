@@ -124,9 +124,9 @@ const ChildTherapistParkCity = () => {
                 variant="cta" 
                 size="lg" 
                 onClick={handleBooking}
-                className="text-lg px-8 py-6"
+                style={{ fontSize: 'clamp(16px, 3vw, 18px)', minHeight: '48px', padding: 'clamp(12px, 3vw, 24px)' }}
               >
-                Check my insurance & book on Headway
+                Check Insurance & Book Now
               </Button>
               <Button 
                 variant="soft" 
@@ -207,9 +207,9 @@ const ChildTherapistParkCity = () => {
                 variant="cta" 
                 size="lg" 
                 onClick={handleBooking}
-                className="text-lg px-8 py-6"
+                style={{ fontSize: 'clamp(16px, 3vw, 18px)', minHeight: '48px', padding: 'clamp(12px, 3vw, 24px) clamp(24px, 6vw, 32px)' }}
               >
-                Check my insurance & book on Headway
+                Check Insurance & Book Now
               </Button>
               <p className="text-muted-foreground mt-4">
                 Check your benefits and see your exact copay in seconds—then book online through Headway.
