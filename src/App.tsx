@@ -15,6 +15,9 @@ import ParentCoachingParkCity from "./pages/ParentCoachingParkCity";
 import InsuranceFees from "./pages/InsuranceFees";
 import AnxietyTherapyParkCity from "./pages/AnxietyTherapyParkCity";
 import SupervisionConsulting from "./pages/SupervisionConsulting";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Terms from "./pages/Terms";
+import NoticeOfPrivacyPractices from "./pages/NoticeOfPrivacyPractices";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +39,9 @@ const App = () => (
             <Route path="/insurance-fees" element={<InsuranceFees />} />
             <Route path="/anxiety-therapy-park-city" element={<AnxietyTherapyParkCity />} />
             <Route path="/supervision-consulting" element={<SupervisionConsulting />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/notice-of-privacy-practices" element={<NoticeOfPrivacyPractices />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
