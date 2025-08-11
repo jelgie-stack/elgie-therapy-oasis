@@ -1,0 +1,8 @@
+# Serve sitemap.xml directly
+/sitemap.xml /sitemap.xml 200
+
+# Serve robots.txt directly  
+/robots.txt /robots.txt 200
+
+# Handle all other routes with React Router
+/* /index.html 200
