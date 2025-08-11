@@ -21,10 +21,9 @@ const Footer = () => {
             </p>
             <div className="mt-4">
               <Button
-                data-contact-cta="true"
                 variant="cta"
                 aria-label="Book a session now"
-                onClick={() => window.open("https://care.headway.co/providers/brigette-elgie?utm_source=site&utm_medium=footer_cta&utm_campaign=142417", "_blank")}
+                onClick={() => window.open("https://care.headway.co/providers/brigette-elgie?utm_source=pem&utm_medium=direct_link&utm_campaign=142417", "_blank")}
               >
                 Book now
               </Button>
