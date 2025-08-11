@@ -45,7 +45,7 @@ const Hero = ({ onVideoClick }: HeroProps) => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-2xl">
           <h1 style={{ fontSize: 'clamp(1.5rem, 3vw + 1rem, 2.5rem)' }} className="font-bold text-foreground mb-6 leading-tight">
-            Helping children, teens, and adults overcome anxiety, strengthen relationships, and thrive.
+            Therapy that helps families thrive.
           </h1>
           
           <p className="tagline text-muted-foreground mb-8 leading-relaxed">
@@ -57,7 +57,7 @@ const Hero = ({ onVideoClick }: HeroProps) => {
               href="https://care.headway.co/providers/brigette-elgie?utm_source=site&utm_medium=hero_cta&utm_campaign=142417" 
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-primary text-primary-foreground px-10 py-4 rounded-lg font-semibold text-lg hover:bg-primary/90 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+              className="inline-block bg-accent text-accent-foreground px-10 py-4 rounded-lg font-semibold text-lg hover:bg-accent/90 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
             >
               Check my insurance & book now
             </a>
