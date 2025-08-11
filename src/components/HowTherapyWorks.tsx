@@ -19,6 +19,35 @@ const HowTherapyWorks = () => {
           </p>
         </div>
 
+        {/* 3-Step Process */}
+        <div className="max-w-4xl mx-auto mb-12">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">
+                1
+              </div>
+              <h3 className="font-semibold text-foreground mb-2">Schedule Consult</h3>
+              <p className="text-sm text-muted-foreground">Free 15-minute consultation to discuss your needs</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">
+                2
+              </div>
+              <h3 className="font-semibold text-foreground mb-2">First Session</h3>
+              <p className="text-sm text-muted-foreground">Begin your therapeutic journey with personalized care</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">
+                3
+              </div>
+              <h3 className="font-semibold text-foreground mb-2">Start Feeling Better</h3>
+              <p className="text-sm text-muted-foreground">Experience positive changes and growth</p>
+            </div>
+          </div>
+        </div>
+
         <div className="max-w-4xl mx-auto">
           <div className="bg-card p-6 rounded-xl shadow-card border border-primary/10">
             <div 
@@ -83,8 +112,20 @@ const HowTherapyWorks = () => {
                 </div>
                 <p className="text-lg font-medium">Video Coming Soon</p>
                 <p className="text-sm">Placeholder for therapeutic process explanation video</p>
-              </div>
-            </div>
+          </div>
+        </div>
+
+        {/* Primary CTA */}
+        <div className="text-center mt-12">
+          <Button 
+            variant="cta" 
+            size="lg"
+            onClick={() => window.open("https://care.headway.co/providers/brigette-elgie?utm_source=site&utm_medium=process_cta&utm_campaign=142417", "_blank")}
+            className="text-lg px-10 py-4"
+          >
+            Check my insurance & book now
+          </Button>
+        </div>
           </DialogContent>
         </Dialog>
       </div>
