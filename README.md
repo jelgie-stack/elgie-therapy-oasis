@@ -64,6 +64,26 @@ This project is built with:
 
 Simply open [Lovable](https://lovable.dev/projects/216cd712-d515-4f1e-a2be-fd5801009726) and click on Share -> Publish.
 
+### Deploying to Cloudflare Pages
+
+This project can also be deployed to Cloudflare Pages:
+
+1. **Connect your GitHub repository** to Cloudflare Pages
+2. **Configure build settings**:
+   - **Framework preset**: None/Other
+   - **Build command**: `npm run build`
+   - **Output directory**: `dist`
+   - **Node.js version**: `20` (or use .nvmrc file)
+3. **Environment variables** (add these in Cloudflare Pages settings):
+   ```
+   VITE_SUPABASE_URL=your_supabase_url
+   VITE_SUPABASE_PUBLISHABLE_KEY=your_supabase_key
+   SKIP_PRERENDER=true
+   ```
+4. **Note**: Set `SKIP_PRERENDER=true` to skip Puppeteer prerendering in CI, as it may fail in Cloudflare's build environment
+
+The project includes CI-safe Puppeteer settings, but you can disable prerendering entirely for Cloudflare Pages deployment by setting the environment variable above.
+
 ## Can I connect a custom domain to my Lovable project?
 
 Yes, you can!

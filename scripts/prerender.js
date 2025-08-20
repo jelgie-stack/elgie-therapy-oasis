@@ -78,6 +78,12 @@ function startStaticServer(dir, port) {
 async function prerender() {
   console.log('Starting pre-rendering process...');
   
+  // Check if we're in CI environment and skip prerender if specified
+  if (process.env.SKIP_PRERENDER === 'true') {
+    console.log('Skipping pre-rendering (SKIP_PRERENDER=true)');
+    return;
+  }
+  
   if (!fs.existsSync(distDir)) {
     console.error('✗ Dist directory not found. Build first with `vite build`.');
     process.exit(1);
@@ -85,7 +91,22 @@ async function prerender() {
   
   const server = await startStaticServer(distDir, 8080);
   
-  const browser = await puppeteer.launch({ headless: true });
+  // CI-safe Puppeteer launch options
+  const launchOptions = {
+    headless: true,
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--disable-dev-shm-usage',
+      '--disable-accelerated-2d-canvas',
+      '--no-first-run',
+      '--no-zygote',
+      '--single-process',
+      '--disable-gpu'
+    ]
+  };
+  
+  const browser = await puppeteer.launch(launchOptions);
   const page = await browser.newPage();
   
   for (const route of routes) {
