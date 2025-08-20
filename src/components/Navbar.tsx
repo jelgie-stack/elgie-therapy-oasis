@@ -1,22 +1,13 @@
-import { useState, useEffect } from "react";
+
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { useThrottledScroll } from "@/hooks/useThrottledScroll";
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const scrollY = useThrottledScroll();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    // Only add scroll listener on client-side
-    if (typeof window === 'undefined') return;
-    
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const isScrolled = scrollY > 50;
 
   const navigateToPage = (url: string) => {
     if (typeof window !== 'undefined') {

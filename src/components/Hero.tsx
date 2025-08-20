@@ -1,22 +1,14 @@
-import { useState, useEffect } from "react";
+
 import { ChevronDown } from "lucide-react";
 import heroImage from "@/assets/hero-therapy-office.jpg";
+import { useThrottledScroll } from "@/hooks/useThrottledScroll";
 
 interface HeroProps {
   onVideoClick: () => void;
 }
 
 const Hero = ({ onVideoClick }: HeroProps) => {
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    // Only add scroll listener on client-side
-    if (typeof window === 'undefined') return;
-    
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const scrollY = useThrottledScroll();
 
   const scrollToContact = () => {
     if (typeof document === 'undefined') return;
