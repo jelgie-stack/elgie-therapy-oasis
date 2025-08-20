@@ -1,18 +1,18 @@
 
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useThrottledScroll } from "@/hooks/useThrottledScroll";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const scrollY = useThrottledScroll();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const isScrolled = scrollY > 50;
 
   const navigateToPage = (url: string) => {
-    if (typeof window !== 'undefined') {
-      window.location.href = url;
-    }
+    navigate(url);
     setIsMobileMenuOpen(false);
   };
 
@@ -27,12 +27,12 @@ const Navbar = () => {
     <header className="fixed top-0 left-0 right-0 z-50 h-16 bg-background/95 backdrop-blur-md shadow-md transition-all duration-300">
       <div className="container mx-auto px-4 h-full">
         <div className="flex items-center justify-between h-full">
-          <a
-            href="/"
+          <button
+            onClick={() => navigate("/")}
             className="text-lg font-bold text-primary hover:text-primary/80 transition-colors flex-wrap"
           >
             Brigette Elgie, LMFT
-          </a>
+          </button>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-4 flex-wrap">
