@@ -84,6 +84,29 @@ This project can also be deployed to Cloudflare Pages:
 
 The project includes CI-safe Puppeteer settings, but you can disable prerendering entirely for Cloudflare Pages deployment by setting the environment variable above.
 
+## Host Redirect Configuration (IMPORTANT)
+
+This project implements a **ONE-WAY edge redirect** from www to apex domain to prevent client-side redirect loops:
+
+### Required Edge/CDN Configuration:
+- **Canonical Host**: `elgietherapy.com` (apex domain)
+- **HTTPS**: Enforced at edge/CDN level (not in client code)
+- **WWW Redirect**: Configure your CDN/edge provider to redirect `www.elgietherapy.com` → `elgietherapy.com` (301 redirect)
+- **SPA Rewrite**: All non-asset requests should serve `/index.html` for React Router
+
+### What NOT to do:
+❌ **Never add client-side host redirects** in React components or JavaScript code  
+❌ **Never modify `window.location.hostname`** in client code  
+❌ **Never add automatic redirects** in service workers
+
+The client code only handles SEO canonical URLs using the `BASE_URL` constant. All host redirects must happen at the edge to prevent reload loops.
+
+### Example Cloudflare Page Rules:
+```
+www.elgietherapy.com/* → https://elgietherapy.com/$1 (301 Redirect)
+elgietherapy.com/* → /index.html (Rewrite for SPA routing)
+```
+
 ## Can I connect a custom domain to my Lovable project?
 
 Yes, you can!

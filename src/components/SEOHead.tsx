@@ -1,6 +1,9 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
+// Canonical base URL - all canonical links derive from this
+const BASE_URL = "https://elgietherapy.com";
+
 interface SEOHeadProps {
   title?: string;
   description?: string;
@@ -14,7 +17,7 @@ const SEOHead = ({
   title, 
   description, 
   canonicalUrl, 
-  ogImage = "https://elgietherapy.com/img/brigette-hero-desktop.webp",
+  ogImage = `${BASE_URL}/img/brigette-hero-desktop.webp`,
   breadcrumbs = [],
   jsonLd = []
 }: SEOHeadProps) => {
@@ -24,8 +27,8 @@ const SEOHead = ({
     // Only run on client-side after hydration
     if (typeof window === 'undefined' || typeof document === 'undefined') return;
     
-    // Update canonical URL
-    const canonical = canonicalUrl || `https://elgietherapy.com${location.pathname}`;
+    // Update canonical URL using BASE_URL constant
+    const canonical = canonicalUrl || `${BASE_URL}${location.pathname}`;
     let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
     if (!canonicalLink) {
       canonicalLink = document.createElement('link');
@@ -124,16 +127,6 @@ const SEOHead = ({
       }
       schemaScript.textContent = JSON.stringify(schema);
     });
-
-    // Force HTTPS redirect (client-side fallback)
-    if (window.location.protocol === 'http:' && window.location.hostname !== 'localhost') {
-      window.location.replace(window.location.href.replace('http:', 'https:'));
-    }
-
-    // Redirect www to non-www (client-side fallback)
-    if (window.location.hostname.startsWith('www.')) {
-      window.location.replace(window.location.href.replace('www.', ''));
-    }
 
   }, [title, description, canonicalUrl, ogImage, breadcrumbs, jsonLd, location]);
 
