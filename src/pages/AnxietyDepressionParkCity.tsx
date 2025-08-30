@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import {
   Accordion,
   AccordionContent,
@@ -28,6 +29,10 @@ const AnxietyDepressionParkCity = () => {
 
   return (
     <div className="min-h-screen">
+      <SEOHead 
+        title="Anxiety & Depression Therapy in Park City, Utah | Brigette Elgie, LMFT"
+        description="Expert anxiety and depression therapy for children, teens & adults in Park City. CBT, mindfulness & evidence-based treatment. Licensed therapist in Utah."
+      />
       <Navbar />
       
       <section className="py-20 bg-gradient-to-b from-background to-secondary/30" style={{ marginTop: '80px' }}>

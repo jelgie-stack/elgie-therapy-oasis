@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import {
   Accordion,
   AccordionContent,
@@ -28,6 +29,10 @@ const ParentCoachingParkCity = () => {
 
   return (
     <div className="min-h-screen">
+      <SEOHead 
+        title="Parent Coaching in Park City, Utah | Brigette Elgie, LMFT"
+        description="Evidence-based parent coaching in Park City. Learn effective strategies for behavioral challenges, family communication & positive parenting techniques."
+      />
       <Navbar />
       
       <section className="py-20 bg-gradient-to-b from-background to-secondary/30" style={{ marginTop: '80px' }}>

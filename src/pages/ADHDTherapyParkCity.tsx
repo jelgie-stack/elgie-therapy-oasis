@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import {
   Accordion,
   AccordionContent,
@@ -28,6 +29,10 @@ const ADHDTherapyParkCity = () => {
 
   return (
     <div className="min-h-screen">
+      <SEOHead 
+        title="ADHD Behavior Coaching in Park City, Utah | Brigette Elgie, LMFT"
+        description="Specialized ADHD behavior coaching & executive function training for children, teens & adults in Park City. Evidence-based strategies for attention & organization."
+      />
       <Navbar />
       
       <section className="py-20 bg-gradient-to-b from-background to-secondary/30" style={{ marginTop: '80px' }}>
