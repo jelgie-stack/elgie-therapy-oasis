@@ -26,7 +26,7 @@ const Index = () => {
       <SEOHead 
         title="Therapist in Park City, UT | Child, Teen & Anxiety Therapy – Brigette Elgie, LMFT"
         description="Expert trauma-informed therapy for children, teens & adults in Park City. EMDR, ART, anxiety & depression treatment. Licensed in Utah, CA, WA, NH."
-        canonicalUrl="https://elgietherapy.com/"
+        canonicalUrl="https://www.elgietherapy.com/"
       />
       <Navbar />
       <Hero onVideoClick={() => setIsVideoModalOpen(true)} />

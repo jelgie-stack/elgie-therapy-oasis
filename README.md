@@ -86,7 +86,7 @@ The project includes CI-safe Puppeteer settings, but you can disable prerenderin
 
 ## Host Redirect Configuration (IMPORTANT)
 
-This project implements a **ONE-WAY edge redirect** from apex to www domain to prevent client-side redirect loops:
+This project uses **www.elgietherapy.com** as the canonical domain with centralized URL management to prevent client-side redirect loops:
 
 ### Required Edge/CDN Configuration:
 - **Canonical Host**: `www.elgietherapy.com` (www subdomain)
@@ -99,7 +99,7 @@ This project implements a **ONE-WAY edge redirect** from apex to www domain to p
 ❌ **Never modify `window.location.hostname`** in client code  
 ❌ **Never add automatic redirects** in service workers
 
-The client code only handles SEO canonical URLs using the `BASE_URL` constant. All host redirects must happen at the edge to prevent reload loops.
+The client code only handles SEO canonical URLs using the centralized `BASE_URL` constant from `src/lib/site.ts`. All host redirects must happen at the edge to prevent reload loops.
 
 ### Example Cloudflare Page Rules:
 ```

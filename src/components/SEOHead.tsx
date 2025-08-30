@@ -1,8 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-
-// Canonical base URL - all canonical links derive from this
-const BASE_URL = "https://www.elgietherapy.com";
+import { BASE_URL, createCanonicalUrl } from '@/lib/site';
 
 interface SEOHeadProps {
   title?: string;
@@ -16,7 +14,7 @@ interface SEOHeadProps {
 const SEOHead = ({ 
   title, 
   description, 
-  canonicalUrl, 
+  canonicalUrl: canonicalUrlProp, 
   ogImage = `${BASE_URL}/img/brigette-hero-desktop.webp`,
   breadcrumbs = [],
   jsonLd = []
@@ -27,15 +25,15 @@ const SEOHead = ({
     // Only run on client-side after hydration
     if (typeof window === 'undefined' || typeof document === 'undefined') return;
     
-    // Update canonical URL using BASE_URL constant
-    const canonical = canonicalUrl || `${BASE_URL}${location.pathname}`;
+    // Build canonical URL - use provided canonical or derive from current path
+    const canonicalUrl = canonicalUrlProp || createCanonicalUrl(location.pathname);
     let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
     if (!canonicalLink) {
       canonicalLink = document.createElement('link');
       canonicalLink.rel = 'canonical';
       document.head.appendChild(canonicalLink);
     }
-    canonicalLink.href = canonical;
+    canonicalLink.href = canonicalUrl;
 
     // Update title
     if (title) {
@@ -70,7 +68,7 @@ const SEOHead = ({
     if (description) {
       updateOGTag('og:description', description);
     }
-    updateOGTag('og:url', canonical);
+    updateOGTag('og:url', canonicalUrl);
     updateOGTag('og:image', ogImage);
 
     // Update Twitter tags
@@ -128,7 +126,7 @@ const SEOHead = ({
       schemaScript.textContent = JSON.stringify(schema);
     });
 
-  }, [title, description, canonicalUrl, ogImage, breadcrumbs, jsonLd, location]);
+  }, [title, description, canonicalUrlProp, ogImage, breadcrumbs, jsonLd, location]);
 
   return null;
 };

@@ -20,7 +20,7 @@ const InsuranceFees = () => {
           name="description" 
           content="See which insurance plans Brigette Elgie, LMFT accepts (Aetna, Regence BCBS of Utah, Cigna, and more) plus transparent self-pay rates for therapy in Park City or online anywhere in Utah." 
         />
-        <link rel="canonical" href="https://brigetteelgie.com/insurance-fees" />
+        <link rel="canonical" href="https://www.elgietherapy.com/insurance-fees" />
       </head>
 
       <div className="min-h-screen">

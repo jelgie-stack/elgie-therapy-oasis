@@ -17,8 +17,8 @@ const EMDRTherapistParkCity = () => {
   };
 
   const breadcrumbs = [
-    { name: "Home", url: "https://elgietherapy.com/" },
-    { name: "EMDR & ART Therapist in Park City", url: "https://elgietherapy.com/emdr-therapist-park-city" }
+    { name: "Home", url: "https://www.elgietherapy.com/" },
+    { name: "EMDR & ART Therapist in Park City", url: "https://www.elgietherapy.com/emdr-therapist-park-city" }
   ];
 
   const jsonLdSchemas = [
@@ -30,13 +30,13 @@ const EMDRTherapistParkCity = () => {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://elgietherapy.com/"
+          "item": "https://www.elgietherapy.com/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "EMDR & ART Therapist in Park City",
-          "item": "https://elgietherapy.com/emdr-therapist-park-city"
+          "item": "https://www.elgietherapy.com/emdr-therapist-park-city"
         }
       ]
     },
@@ -85,7 +85,6 @@ const EMDRTherapistParkCity = () => {
       <SEOHead 
         title="EMDR & ART Therapist Park City, UT | Trauma Therapy – Brigette Elgie, LMFT"
         description="EMDR and Accelerated Resolution Therapy (ART) in Park City for trauma, anxiety, and distressing memories. In-person Pinebrook or telehealth in Utah. Check insurance & book via Headway."
-        canonicalUrl="https://elgietherapy.com/emdr-therapist-park-city"
         breadcrumbs={breadcrumbs}
         jsonLd={jsonLdSchemas}
       />

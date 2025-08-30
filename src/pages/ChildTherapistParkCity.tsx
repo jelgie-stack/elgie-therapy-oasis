@@ -17,8 +17,8 @@ const ChildTherapistParkCity = () => {
   };
 
   const breadcrumbs = [
-    { name: "Home", url: "https://elgietherapy.com/" },
-    { name: "Child Therapist Park City", url: "https://elgietherapy.com/child-therapist-park-city" }
+    { name: "Home", url: "https://www.elgietherapy.com/" },
+    { name: "Child Therapist Park City", url: "https://www.elgietherapy.com/child-therapist-park-city" }
   ];
 
   const jsonLdSchemas = [
@@ -67,7 +67,6 @@ const ChildTherapistParkCity = () => {
       <SEOHead 
         title="Child Therapist Park City, UT | Ages 6–18 · Brigette Elgie, LMFT"
         description="Child therapy in Park City for ages 6–18—anxiety, behavior, social skills. In-person Pinebrook or telehealth statewide. Check insurance & book through Headway."
-        canonicalUrl="https://elgietherapy.com/child-therapist-park-city"
         breadcrumbs={breadcrumbs}
         jsonLd={jsonLdSchemas}
       />

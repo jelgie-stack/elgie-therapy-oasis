@@ -13,8 +13,8 @@ const AnxietyTherapyParkCity = () => {
   };
 
   const breadcrumbs = [
-    { name: "Home", url: "https://elgietherapy.com/" },
-    { name: "Anxiety Therapy in Park City", url: "https://elgietherapy.com/anxiety-therapy-park-city" }
+    { name: "Home", url: "https://www.elgietherapy.com/" },
+    { name: "Anxiety Therapy in Park City", url: "https://www.elgietherapy.com/anxiety-therapy-park-city" }
   ];
 
   return (
@@ -22,7 +22,6 @@ const AnxietyTherapyParkCity = () => {
       <SEOHead 
         title="Anxiety Therapist Park City, UT | Evidence-Based Care – Brigette Elgie, LMFT"
         description="Evidence-based anxiety treatment in Park City, UT – therapy for panic, social anxiety & chronic worry with Brigette Elgie, LMFT. In-person or telehealth. Free 15-min consult."
-        canonicalUrl="https://elgietherapy.com/anxiety-therapy-park-city"
         breadcrumbs={breadcrumbs}
       />
 

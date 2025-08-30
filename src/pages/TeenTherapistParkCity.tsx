@@ -17,8 +17,8 @@ const TeenTherapistParkCity = () => {
   };
 
   const breadcrumbs = [
-    { name: "Home", url: "https://elgietherapy.com/" },
-    { name: "Teen Therapist in Park City", url: "https://elgietherapy.com/teen-therapist-park-city" }
+    { name: "Home", url: "https://www.elgietherapy.com/" },
+    { name: "Teen Therapist in Park City", url: "https://www.elgietherapy.com/teen-therapist-park-city" }
   ];
 
   const jsonLdSchemas = [
@@ -30,13 +30,13 @@ const TeenTherapistParkCity = () => {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://elgietherapy.com/"
+          "item": "https://www.elgietherapy.com/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Teen Therapist in Park City",
-          "item": "https://elgietherapy.com/teen-therapist-park-city"
+          "item": "https://www.elgietherapy.com/teen-therapist-park-city"
         }
       ]
     },
@@ -85,7 +85,6 @@ const TeenTherapistParkCity = () => {
       <SEOHead 
         title="Teen Therapist Park City, UT | Ages 13–18 · Brigette Elgie, LMFT"
         description="Teen therapy in Park City for ages 13–18—anxiety, depression, school stress, social anxiety, and perfectionism. In-person Pinebrook or telehealth in Utah. Check insurance & book via Headway."
-        canonicalUrl="https://elgietherapy.com/teen-therapist-park-city"
         breadcrumbs={breadcrumbs}
         jsonLd={jsonLdSchemas}
       />

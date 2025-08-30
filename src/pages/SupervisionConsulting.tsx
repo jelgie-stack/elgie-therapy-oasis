@@ -51,7 +51,6 @@ const SupervisionConsulting = () => {
       <SEOHead 
         title="Clinical Supervision for Therapists in Park City, UT – Brigette Elgie, LMFT"
         description="Expert clinical supervision for associate therapists. Specializing in child, teen & trauma therapy. EMDR, ART training. Licensed supervisor in Utah, CA, WA, NH."
-        canonicalUrl="https://elgietherapy.com/supervision-consulting"
       />
       <Navbar />
       

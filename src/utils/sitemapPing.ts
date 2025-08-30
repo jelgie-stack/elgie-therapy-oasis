@@ -5,7 +5,7 @@ export const pingGoogleSitemap = async () => {
   try {
     // Use a simple fetch to ping Google's sitemap update service
     const response = await fetch(
-      `https://www.google.com/ping?sitemap=${encodeURIComponent('https://elgietherapy.com/sitemap.xml')}`,
+      `https://www.google.com/ping?sitemap=${encodeURIComponent('https://www.elgietherapy.com/sitemap.xml')}`,
       { 
         method: 'GET',
         mode: 'no-cors' // CORS will block the response, but the ping still works
@@ -40,7 +40,7 @@ export const pingGoogleSitemapEnhanced = async () => {
   try {
     // Primary Google ping
     await fetch(
-      `https://www.google.com/ping?sitemap=${encodeURIComponent('https://elgietherapy.com/sitemap.xml')}`,
+      `https://www.google.com/ping?sitemap=${encodeURIComponent('https://www.elgietherapy.com/sitemap.xml')}`,
       { 
         method: 'GET',
         mode: 'no-cors' 
@@ -49,7 +49,7 @@ export const pingGoogleSitemapEnhanced = async () => {
     
     // Bing ping as fallback
     await fetch(
-      `https://www.bing.com/ping?sitemap=${encodeURIComponent('https://elgietherapy.com/sitemap.xml')}`,
+      `https://www.bing.com/ping?sitemap=${encodeURIComponent('https://www.elgietherapy.com/sitemap.xml')}`,
       { 
         method: 'GET',
         mode: 'no-cors' 
