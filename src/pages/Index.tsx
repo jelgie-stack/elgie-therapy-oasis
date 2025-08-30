@@ -24,7 +24,7 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <SEOHead 
-        title="Therapist in Park City, UT | Child, Teen & Anxiety Therapy – Brigette Elgie, LMFT"
+        title="Brigette Elgie LMFT | Park City Child & Teen Therapist"
         description="Expert trauma-informed therapy for children, teens & adults in Park City. EMDR, ART, anxiety & depression treatment. Licensed in Utah, CA, WA, NH."
         canonicalUrl="https://www.elgietherapy.com/"
       />
