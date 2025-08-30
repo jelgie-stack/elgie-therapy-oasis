@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 // Canonical base URL - all canonical links derive from this
-const BASE_URL = "https://elgietherapy.com";
+const BASE_URL = "https://www.elgietherapy.com";
 
 interface SEOHeadProps {
   title?: string;
