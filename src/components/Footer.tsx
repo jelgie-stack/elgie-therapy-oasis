@@ -28,7 +28,7 @@ const Footer = () => {
   return (
     <footer className="relative mt-16 border-t border-border bg-background text-foreground">
       {/* Top CTA bar */}
-      <div className="mx-auto max-w-7xl px-6 py-6 sm:px-8">
+      <div className="container mx-auto px-4 py-6">
         <div className="flex flex-col gap-4 rounded-2xl bg-accent/10 p-5 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="text-base font-medium">Ready to feel better, faster?</p>
@@ -55,7 +55,7 @@ const Footer = () => {
       </div>
 
       {/* Main footer grid */}
-      <div className="mx-auto max-w-7xl px-6 pb-10 sm:px-8">
+      <div className="container mx-auto px-4 pb-10">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand / About */}
           <div>
@@ -177,7 +177,7 @@ const Footer = () => {
 
       {/* Bottom bar */}
       <div className="border-t border-border">
-        <div className="mx-auto max-w-7xl px-6 py-6 sm:px-8">
+        <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
             <p className="text-xs text-muted-foreground">
               © {year} Brigette Elgie, MFT, PLLC • All rights reserved
