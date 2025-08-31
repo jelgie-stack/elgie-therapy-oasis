@@ -78,7 +78,7 @@ const Footer = () => {
             </a>
             <p className="mt-2 text-sm font-medium">By appointment (Mon–Sat, MT)</p>
             <p className="mt-3 text-sm leading-6 text-muted-foreground">
-              Individual, couples, and family therapy delivered with warmth, clarity, and evidence-based care—online and in Park City.
+              Therapy for individuals, couples, and families—warm, clear, evidence-based, online and in Park City.
             </p>
             <div className="mt-4">
               <h5 className="font-medium mb-2 text-sm">Licensed In</h5>
@@ -168,7 +168,7 @@ const Footer = () => {
         </div>
 
         {/* Crisis note */}
-        <div className="mt-10 rounded-xl bg-destructive/10 p-4 text-sm leading-6 text-destructive-foreground border border-destructive/20">
+        <div className="mt-10 rounded-xl bg-gradient-to-br from-primary-light/30 to-accent-light/20 border border-primary/10 p-4 text-sm leading-6 text-foreground">
           <p>
             If you are experiencing a mental health emergency, call 911 or the Suicide & Crisis Lifeline at <a href="tel:988" className="underline font-semibold">988</a>. Our practice is not a 24/7 crisis service.
           </p>
@@ -183,7 +183,7 @@ const Footer = () => {
               © {year} Brigette Elgie, MFT, PLLC • All rights reserved
             </p>
             <p className="text-xs text-muted-foreground">
-              Licensed Marriage and Family Therapist • Serving Park City & Utah
+              Licensed Marriage and Family Therapist • Serving Park City & Telehealth
             </p>
           </div>
         </div>
