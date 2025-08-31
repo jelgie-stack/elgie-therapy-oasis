@@ -80,6 +80,12 @@ const Footer = () => {
             <p className="mt-3 text-sm leading-6 text-muted-foreground">
               Individual, couples, and family therapy delivered with warmth, clarity, and evidence-based care—online and in Park City.
             </p>
+            <div className="mt-4">
+              <h5 className="font-medium mb-2 text-sm">Licensed In</h5>
+              <p className="text-xs text-muted-foreground mb-4">
+                Utah, California, Washington, New Hampshire
+              </p>
+            </div>
             <ul className="mt-4 flex items-center gap-3" aria-label="Contact links">
               <li>
                 <a
@@ -157,10 +163,6 @@ const Footer = () => {
             <ul className="mt-4 space-y-2">
               <LinkItem href="https://login.headway.co/u/login/">Client Portal</LinkItem>
               <LinkItem href="/insurance-fees">Rates and Insurance</LinkItem>
-              <li className="text-xs text-muted-foreground mt-4">
-                <span className="block font-medium mb-2">Licensed In</span>
-                Utah, California, Washington, New Hampshire
-              </li>
             </ul>
           </div>
         </div>
