@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import { normalizeUrl } from "@/utils/normalizeUrl";
 import {
   Accordion,
   AccordionContent,
@@ -17,8 +18,8 @@ const TeenTherapistParkCity = () => {
   };
 
   const breadcrumbs = [
-    { name: "Home", url: "https://www.elgietherapy.com/" },
-    { name: "Teen Therapist in Park City", url: "https://www.elgietherapy.com/teen-therapist-park-city" }
+    { name: "Home", url: normalizeUrl("https://www.elgietherapy.com/") },
+    { name: "Teen Therapist in Park City", url: normalizeUrl("https://www.elgietherapy.com/teen-therapist-park-city") }
   ];
 
   const jsonLdSchemas = [
@@ -155,7 +156,7 @@ const TeenTherapistParkCity = () => {
               <p className="mb-4">I integrate evidence-based approaches tailored to each teen's needs. CBT skills help teens understand the connection between thoughts, feelings, and actions. For teens who have experienced trauma or have stuck stress responses, I use ART/EMDR-informed strategies.</p>
               <p className="mb-4">Mindfulness and breathing techniques are particularly effective for panic attacks and overwhelming emotions. For teens struggling with low mood, I use behavioral activation to help them re-engage with meaningful activities.</p>
               <p className="mb-4">For teens dealing with avoidance, I use exposure-with-compassion approaches that gradually build confidence. I also provide executive-skills coaching for organization, time management, and planning—particularly helpful for teens with ADHD.</p>
-              <p className="mb-4">For comprehensive <a href="/anxiety-therapy-park-city" className="text-primary hover:text-primary/80 underline">anxiety therapy in Park City</a> support, I often integrate these approaches. If your teen also needs support for younger siblings, I also provide <a href="/child-therapist-park-city" className="text-primary hover:text-primary/80 underline">child therapist in Park City</a> services for the whole family.</p>
+              <p className="mb-4">For comprehensive <a href={normalizeUrl("/anxiety-therapy-park-city")} className="text-primary hover:text-primary/80 underline">anxiety therapy in Park City</a> support, I often integrate these approaches. If your teen also needs support for younger siblings, I also provide <a href={normalizeUrl("/child-therapist-park-city")} className="text-primary hover:text-primary/80 underline">child therapist in Park City</a> services for the whole family.</p>
               
               <h2 className="text-2xl font-bold text-foreground mt-12 mb-6">What families can expect</h2>
               <p className="mb-4">You can expect a warm, judgment-free space where your teen feels heard and respected. Every week, your teen will leave with actionable tools they can use immediately to manage stress, anxiety, or whatever brought them to therapy.</p>
@@ -164,7 +165,7 @@ const TeenTherapistParkCity = () => {
               
               <h2 className="text-2xl font-bold text-foreground mt-12 mb-6">Insurance & fees</h2>
               <p className="mb-4">I accept Aetna, Cigna, and Regence BlueCross BlueShield of Utah (and others) through Headway. You can check your exact copay and book directly through their platform—no surprises or upfront costs.</p>
-              <p className="mb-4">For families paying privately, sessions are $150. Payment is due at time of service. See my full <a href="/insurance-fees" className="text-primary hover:text-primary/80 underline">Insurance & Fees</a> page for detailed information.</p>
+              <p className="mb-4">For families paying privately, sessions are $150. Payment is due at time of service. See my full <a href={normalizeUrl("/insurance-fees")} className="text-primary hover:text-primary/80 underline">Insurance & Fees</a> page for detailed information.</p>
               
               <h2 className="text-2xl font-bold text-foreground mt-12 mb-6">In-person in Pinebrook or telehealth in Utah</h2>
               <p className="mb-4">My office is located at 3080 Pinebrook Road, Suite 1100, Park City, UT 84098—convenient to Pinebrook, Jeremy Ranch, Kimball Junction, and Park City Schools. After-school appointment times are available.</p>
@@ -186,7 +187,7 @@ const TeenTherapistParkCity = () => {
                 size="lg" 
                  onClick={() => {
                    if (typeof window !== 'undefined') {
-                     window.location.href = "/#contact";
+                     window.location.href = normalizeUrl("/#contact");
                    }
                  }}
                 className="text-lg px-8 py-6"
@@ -236,7 +237,7 @@ const TeenTherapistParkCity = () => {
             <div className="mt-16 p-6 bg-card rounded-lg border border-primary/10">
               <h3 className="text-xl font-semibold text-primary mb-4">Licensed & Experienced</h3>
               <p className="text-muted-foreground mb-4">LMFT, Utah #9463019-3902 • 20+ years specializing in teen and family therapy</p>
-              <p className="text-muted-foreground italic">For client privacy and ethical guidelines, we don't publish client reviews. If you have questions about fit or approach, please <a href="/#contact" className="underline text-primary hover:text-primary/80">reach out through our contact form</a>.</p>
+              <p className="text-muted-foreground italic">For client privacy and ethical guidelines, we don't publish client reviews. If you have questions about fit or approach, please <a href={normalizeUrl("/#contact")} className="underline text-primary hover:text-primary/80">reach out through our contact form</a>.</p>
             </div>
 
             {/* Location Details */}

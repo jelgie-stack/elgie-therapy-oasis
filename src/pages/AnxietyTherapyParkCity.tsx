@@ -4,6 +4,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import { normalizeUrl } from "@/utils/normalizeUrl";
 
 const AnxietyTherapyParkCity = () => {
   const handleBooking = () => {
@@ -13,8 +14,8 @@ const AnxietyTherapyParkCity = () => {
   };
 
   const breadcrumbs = [
-    { name: "Home", url: "https://www.elgietherapy.com/" },
-    { name: "Anxiety Therapy in Park City", url: "https://www.elgietherapy.com/anxiety-therapy-park-city" }
+    { name: "Home", url: normalizeUrl("https://www.elgietherapy.com/") },
+    { name: "Anxiety Therapy in Park City", url: normalizeUrl("https://www.elgietherapy.com/anxiety-therapy-park-city") }
   ];
 
   return (
@@ -208,7 +209,7 @@ const AnxietyTherapyParkCity = () => {
             <Card className="max-w-4xl mx-auto">
               <CardContent className="p-8">
                 <p className="text-muted-foreground text-center">
-                  Brigette is <strong>in-network</strong> with Aetna, Cigna, Regence BCBS of Utah, and more—see full list on our <a href="/insurance-fees" className="text-primary hover:underline">Insurance & Fees</a> page. Private-pay rate is <strong>$165 per 50-minute session</strong>. Headway verifies your benefits in seconds so there are no billing surprises.
+                  Brigette is <strong>in-network</strong> with Aetna, Cigna, Regence BCBS of Utah, and more—see full list on our <a href={normalizeUrl("/insurance-fees")} className="text-primary hover:underline">Insurance & Fees</a> page. Private-pay rate is <strong>$165 per 50-minute session</strong>. Headway verifies your benefits in seconds so there are no billing surprises.
                 </p>
               </CardContent>
             </Card>

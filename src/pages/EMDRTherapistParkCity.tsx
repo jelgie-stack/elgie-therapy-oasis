@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import { normalizeUrl } from "@/utils/normalizeUrl";
 import {
   Accordion,
   AccordionContent,
@@ -17,8 +18,8 @@ const EMDRTherapistParkCity = () => {
   };
 
   const breadcrumbs = [
-    { name: "Home", url: "https://www.elgietherapy.com/" },
-    { name: "EMDR & ART Therapist in Park City", url: "https://www.elgietherapy.com/emdr-therapist-park-city" }
+    { name: "Home", url: normalizeUrl("https://www.elgietherapy.com/") },
+    { name: "EMDR & ART Therapist in Park City", url: normalizeUrl("https://www.elgietherapy.com/emdr-therapist-park-city") }
   ];
 
   const jsonLdSchemas = [
@@ -147,14 +148,14 @@ const EMDRTherapistParkCity = () => {
                   <span>First-responder and occupational stress</span>
                 </li>
               </ul>
-              <p className="mb-4">I screen for readiness and tailor the approach to your specific needs and comfort level. These approaches can often be integrated with <a href="/anxiety-therapy-park-city" className="text-primary hover:text-primary/80 underline">anxiety therapy in Park City</a> and other therapeutic approaches.</p>
+              <p className="mb-4">I screen for readiness and tailor the approach to your specific needs and comfort level. These approaches can often be integrated with <a href={normalizeUrl("/anxiety-therapy-park-city")} className="text-primary hover:text-primary/80 underline">anxiety therapy in Park City</a> and other therapeutic approaches.</p>
               
               <h2 className="text-2xl font-bold text-foreground mt-12 mb-6">How EMDR/ART works here</h2>
               <p className="mb-4"><strong>Consultation & Assessment:</strong> We start with understanding your history, current goals, and developing a safety plan. I'll explain how these approaches work and answer your questions.</p>
               <p className="mb-4"><strong>Preparation:</strong> You'll learn grounding skills, resourcing techniques, and understand the session structure. This ensures you feel stable and prepared before we begin processing work.</p>
               <p className="mb-4"><strong>Processing Sessions:</strong> We'll use EMDR or ART (or elements of both) depending on your needs and preferences. You'll stay in charge of the process—no detailed retelling is required to make progress.</p>
               <p className="mb-4"><strong>Review & Stabilization:</strong> We regularly measure progress and add coping tools as needed. A focused course often spans several sessions; pace varies by person.</p>
-              <p className="mb-4">For families needing additional support, I also provide <a href="/child-therapist-park-city" className="text-primary hover:text-primary/80 underline">child therapist in Park City</a> and <a href="/teen-therapist-park-city" className="text-primary hover:text-primary/80 underline">teen therapy in Park City</a> services.</p>
+              <p className="mb-4">For families needing additional support, I also provide <a href={normalizeUrl("/child-therapist-park-city")} className="text-primary hover:text-primary/80 underline">child therapist in Park City</a> and <a href={normalizeUrl("/teen-therapist-park-city")} className="text-primary hover:text-primary/80 underline">teen therapy in Park City</a> services.</p>
               
               <h2 className="text-2xl font-bold text-foreground mt-12 mb-6">EMDR vs. ART—how I choose</h2>
               <p className="mb-4">I consider your preference, symptom profile (such as intrusive images versus somatic sensations), and how you respond in early sessions. Some people benefit from EMDR's structured 8-phase protocol, while others prefer ART's imagery-focused approach. Both can be blended with CBT and skills work to provide comprehensive support tailored to your healing journey.</p>
@@ -166,7 +167,7 @@ const EMDRTherapistParkCity = () => {
               
               <h2 className="text-2xl font-bold text-foreground mt-12 mb-6">Insurance & fees</h2>
               <p className="mb-4">I accept Aetna, Cigna, and Regence BlueCross BlueShield of Utah (and others) through Headway. You can check your exact copay and book directly through their platform—no surprises or upfront costs.</p>
-              <p className="mb-6">For those paying privately, sessions are $150. Payment is due at time of service. See my full <a href="/insurance-fees" className="text-primary hover:text-primary/80 underline">Insurance & Fees</a> page for detailed information.</p>
+              <p className="mb-6">For those paying privately, sessions are $150. Payment is due at time of service. See my full <a href={normalizeUrl("/insurance-fees")} className="text-primary hover:text-primary/80 underline">Insurance & Fees</a> page for detailed information.</p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 mt-8 mb-12">
@@ -183,7 +184,7 @@ const EMDRTherapistParkCity = () => {
                 size="lg" 
                  onClick={() => {
                    if (typeof window !== 'undefined') {
-                     window.location.href = "/#contact";
+                     window.location.href = normalizeUrl("/#contact");
                    }
                  }}
                 className="text-lg px-8 py-6"
@@ -233,7 +234,7 @@ const EMDRTherapistParkCity = () => {
             <div className="mt-16 p-6 bg-card rounded-lg border border-primary/10">
               <h3 className="text-xl font-semibold text-primary mb-4">Licensed & Experienced</h3>
               <p className="text-muted-foreground mb-4">LMFT, Utah #9463019-3902 • 20+ years specializing in trauma therapy • EMDR and ART trained</p>
-              <p className="text-muted-foreground italic">For client privacy and ethical guidelines, we don't publish client reviews. If you have questions about fit or approach, please <a href="/#contact" className="underline text-primary hover:text-primary/80">reach out through our contact form</a>.</p>
+              <p className="text-muted-foreground italic">For client privacy and ethical guidelines, we don't publish client reviews. If you have questions about fit or approach, please <a href={normalizeUrl("/#contact")} className="underline text-primary hover:text-primary/80">reach out through our contact form</a>.</p>
             </div>
 
             {/* Location Details */}

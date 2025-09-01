@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useThrottledScroll } from "@/hooks/useThrottledScroll";
+import { normalizeUrl } from "@/utils/normalizeUrl";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ const Navbar = () => {
   const isScrolled = scrollY > 50;
 
   const navigateToPage = (url: string) => {
-    navigate(url);
+    navigate(normalizeUrl(url));
     setIsMobileMenuOpen(false);
   };
 
@@ -28,7 +29,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 h-full">
         <div className="flex items-center justify-between h-full">
           <button
-            onClick={() => navigate("/")}
+            onClick={() => navigate(normalizeUrl("/"))}
             className="text-lg font-bold text-primary hover:text-primary/80 transition-colors flex-wrap"
           >
             Brigette Elgie, LMFT
@@ -61,7 +62,7 @@ const Navbar = () => {
               Fees
             </button>
             <a
-              href="/#contact"
+              href={normalizeUrl("/#contact")}
               className="text-sm text-foreground hover:text-primary transition-colors"
             >
               Contact
@@ -125,7 +126,7 @@ const Navbar = () => {
                 Fees
               </button>
               <a
-                href="/#contact"
+                href={normalizeUrl("/#contact")}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="block w-full text-left text-foreground hover:text-primary transition-colors py-3 px-2"
                 style={{ minHeight: '48px' }}

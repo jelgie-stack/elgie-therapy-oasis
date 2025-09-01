@@ -1,4 +1,5 @@
 import * as React from "react";
+import { normalizeUrl } from "@/utils/normalizeUrl";
 
 function SectionHeading({ children }: { children: React.ReactNode }) {
   return (
@@ -12,7 +13,7 @@ function LinkItem({ href, children }: { href: string; children: React.ReactNode 
   return (
     <li>
       <a
-        href={href}
+        href={normalizeUrl(href)}
         className="text-sm text-muted-foreground hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary rounded"
       >
         {children}
@@ -59,7 +60,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand / About */}
           <div>
-            <a href="/" className="inline-flex items-center gap-3">
+            <a href={normalizeUrl("/")} className="inline-flex items-center gap-3">
               {/* Inline SVG icon */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"

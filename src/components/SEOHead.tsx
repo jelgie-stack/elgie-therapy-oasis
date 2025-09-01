@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { BASE_URL, createCanonicalUrl } from '@/lib/site';
+import { normalizeUrl } from '@/utils/normalizeUrl';
 
 interface SEOHeadProps {
   title?: string;
@@ -26,7 +27,7 @@ const SEOHead = ({
     if (typeof window === 'undefined' || typeof document === 'undefined') return;
     
     // Build canonical URL - use provided canonical or derive from current path
-    const canonicalUrl = canonicalUrlProp || createCanonicalUrl(location.pathname);
+    const canonicalUrl = canonicalUrlProp ? normalizeUrl(canonicalUrlProp) : normalizeUrl(createCanonicalUrl(location.pathname));
     let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
     if (!canonicalLink) {
       canonicalLink = document.createElement('link');

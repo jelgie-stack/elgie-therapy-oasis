@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import { normalizeUrl } from "@/utils/normalizeUrl";
 import {
   Accordion,
   AccordionContent,
@@ -17,8 +18,8 @@ const ChildTherapistParkCity = () => {
   };
 
   const breadcrumbs = [
-    { name: "Home", url: "https://www.elgietherapy.com/" },
-    { name: "Child Therapist Park City", url: "https://www.elgietherapy.com/child-therapist-park-city" }
+    { name: "Home", url: normalizeUrl("https://www.elgietherapy.com/") },
+    { name: "Child Therapist Park City", url: normalizeUrl("https://www.elgietherapy.com/child-therapist-park-city") }
   ];
 
   const jsonLdSchemas = [
@@ -94,14 +95,14 @@ const ChildTherapistParkCity = () => {
               
               <h2 className="text-2xl font-bold text-foreground mt-12 mb-6">For teens (13–18)</h2>
               <p className="mb-4">Teenagers face unique pressures—social anxiety, mood swings, academic stress, and screen time struggles. I work collaboratively with teens to set goals that matter to them, whether that's managing panic attacks, improving social confidence, or building healthy habits.</p>
-              <p className="mb-4">Your teen stays in control of their therapy while you receive periodic updates and guidance on supporting them through this challenging phase. For comprehensive teen-specific support, see our dedicated <a href="/teen-therapist-park-city" className="text-primary hover:text-primary/80 underline">teen therapy in Park City</a> services.</p>
+              <p className="mb-4">Your teen stays in control of their therapy while you receive periodic updates and guidance on supporting them through this challenging phase. For comprehensive teen-specific support, see our dedicated <a href={normalizeUrl("/teen-therapist-park-city")} className="text-primary hover:text-primary/80 underline">teen therapy in Park City</a> services.</p>
               
               <h2 className="text-2xl font-bold text-foreground mt-12 mb-6">How child therapy works here</h2>
               <p className="mb-4">We start with a parent consultation where I learn about your concerns and your child's strengths. Then I meet with your child for 1–2 sessions to understand their perspective and begin building our therapeutic relationship.</p>
               <p className="mb-4">Sessions are typically weekly at first, then we space them out as skills develop. I provide regular parent feedback and check-ins, so you're never wondering what's happening in therapy or how to help at home.</p>
               
               <h2 className="text-2xl font-bold text-foreground mt-12 mb-6">Approaches I use</h2>
-              <p className="mb-4">I integrate CBT skills training with trauma-informed approaches like <a href="/emdr-therapist-park-city" className="text-primary hover:text-primary/80 underline">ART/EMDR-informed strategies</a> when appropriate. For younger children, this often looks like play therapy and social skills practice. For teens, I often integrate <a href="/anxiety-therapy-park-city" className="text-primary hover:text-primary/80 underline">anxiety therapy in Park City</a> approaches.</p>
+              <p className="mb-4">I integrate CBT skills training with trauma-informed approaches like <a href={normalizeUrl("/emdr-therapist-park-city")} className="text-primary hover:text-primary/80 underline">ART/EMDR-informed strategies</a> when appropriate. For younger children, this often looks like play therapy and social skills practice. For teens, I often integrate <a href={normalizeUrl("/anxiety-therapy-park-city")} className="text-primary hover:text-primary/80 underline">anxiety therapy in Park City</a> approaches.</p>
               <p className="mb-4">Parent training is a key component—I'll teach you evidence-based strategies for managing difficult behaviors, supporting emotional regulation, and building your child's confidence at home.</p>
               
               <h2 className="text-2xl font-bold text-foreground mt-12 mb-6">What parents can expect</h2>
@@ -110,7 +111,7 @@ const ChildTherapistParkCity = () => {
               
               <h2 className="text-2xl font-bold text-foreground mt-12 mb-6">Insurance & fees</h2>
               <p className="mb-4">I accept Aetna, Cigna, and Regence BlueCross BlueShield of Utah through Headway. You can check your exact copay and book directly through their platform—no surprises or upfront costs.</p>
-              <p className="mb-4">For families paying privately, sessions are $150. Payment is due at time of service. See my full <a href="/insurance-fees" className="text-primary hover:text-primary/80 underline">Insurance & Fees</a> page for detailed information.</p>
+              <p className="mb-4">For families paying privately, sessions are $150. Payment is due at time of service. See my full <a href={normalizeUrl("/insurance-fees")} className="text-primary hover:text-primary/80 underline">Insurance & Fees</a> page for detailed information.</p>
               
               <h2 className="text-2xl font-bold text-foreground mt-12 mb-6">In-person in Pinebrook or telehealth</h2>
               <p className="mb-4">My office is located at 3080 Pinebrook Road, Suite 1100, Park City, UT 84098—convenient to Pinebrook, Jeremy Ranch, Kimball Junction, and Park City Schools.</p>
@@ -130,11 +131,11 @@ const ChildTherapistParkCity = () => {
               <Button 
                 variant="soft" 
                 size="lg" 
-                 onClick={() => {
-                   if (typeof window !== 'undefined') {
-                     window.location.href = "/#contact";
-                   }
-                 }}
+                  onClick={() => {
+                    if (typeof window !== 'undefined') {
+                      window.location.href = normalizeUrl("/#contact");
+                    }
+                  }}
                 className="text-lg px-8 py-6"
               >
                 Contact for Questions
