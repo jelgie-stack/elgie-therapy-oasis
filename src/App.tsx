@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ContactModalProvider } from "@/components/ContactModalProvider";
+import ScrollManager from "@/components/ScrollManager";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ChildTherapistParkCity from "./pages/ChildTherapistParkCity";
@@ -25,6 +26,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollManager />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/child-therapist-park-city" element={<ChildTherapistParkCity />} />

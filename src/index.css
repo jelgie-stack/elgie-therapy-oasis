@@ -117,7 +117,12 @@
 }
 
 @layer base {
-  * {
+/* Global scroll margin for anchor links to account for sticky headers */
+[id] {
+  scroll-margin-top: 80px;
+}
+
+* {
     @apply border-border;
   }
 
